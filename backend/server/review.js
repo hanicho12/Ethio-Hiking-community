@@ -1,0 +1,80 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const Schema = mongoose.Schema;
+
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+
+mongoose.connect('mongodb+srv://EthioHiking:Ethiohikinghun12@cluster0.whictqk.mongodb.net/?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log('connected to mongodb');
+}).catch((error) => {
+  console.error('error connecting to mongodb:', error);
+});
+
+const reviewSchema = new Schema({
+  title: String,
+  review: String,
+  name: String,
+  email: String,
+  verified: String,
+  stars: Number,
+  date: { type: Date, default: Date.now }
+});
+
+const Review = mongoose.model('Review', reviewSchema);
+
+app.post('/api/reviews', async (req, res) => {
+  try {
+    const { title, review, name, email, verified, stars } = req.body;
+    const newReview = new Review({ title, review, name, email, verified, stars });
+    await newReview.save();
+    res.status(201).json(newReview);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+app.get('/api/reviews', async (req, res) => {
+  try {
+    const reviews = await Review.find().sort({ date: -1 });
+    res.json(reviews.map(review => ({ ...review.toObject(), stars: review.stars }))); // Include the stars field in the response
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+app.get('/api/reviews/count', async (req, res) => {
+    try {
+        const count = await Review.countDocuments();
+        res.json({ count });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+app.get('/api/reviews/average-rating', async (req, res) => {
+    try {
+        const reviews = await Review.find();
+        let totalStars = 0;
+        reviews.forEach(review => {
+            totalStars += review.stars;
+        });
+        const averageRating = reviews.length > 0 ? totalStars / reviews.length : 0;
+        res.json({ averageRating });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+
+app.listen(3000, () => console.log('server running on port 5000'));

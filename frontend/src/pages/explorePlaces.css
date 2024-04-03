@@ -1,0 +1,82 @@
+.explore-img{
+    width: 45vw;
+    height: 45vh;
+    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.explore-container{
+    padding: 5vw;
+}
+.explore-1st{
+    display: flex;
+    gap: 5vw;
+    margin-bottom: 4rem;
+}
+.explore-1st p{
+    width: 40vw;
+    height: 45vh;
+    text-align: justify;
+    margin-top: 2rem;
+    font-size: 17px;
+}
+.explore-container h3{
+    text-align: center;
+}
+.explore-container h1{
+text-transform: uppercase;
+}
+.imgs{
+    display: flex;
+    gap: 5vw;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+.activities{
+    width:70%;
+    margin: 0 auto;
+}
+.activities h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.activities p{
+    text-align: center;
+}
+.activities-list{
+    text-decoration:dashed;
+
+}
+.activities-list ul li:not(:first-child){
+    margin-top: 0.5rem;
+}
+.activities-list ul{
+    width: 45vw;
+}
+.activity-lists{
+    width: 85vw;
+}
+.all-activities{
+    display: flex;
+    gap: 1rem;
+}
+.last{
+display: flex;
+gap: 1rem;
+}
+.last .img1, .last .img2{
+    width: 22vw;
+    height: 35vh;
+    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+button{
+    margin-bottom: 1rem;
+}
+.actitvity2{
+    font-size: larger;
+}

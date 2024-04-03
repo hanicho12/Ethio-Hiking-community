@@ -1,0 +1,176 @@
+.review-container{
+    width: 90vw;
+    margin: 0 auto;
+    padding: 6rem;
+}
+.review-container h1{
+    text-align: center;
+    margin-bottom: 2rem;  
+}
+.review-container h3{
+    margin-top: 1rem;  
+}
+
+.review-container .title{
+    font-size: 2rem;
+}
+.review-container .desc{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.review-container .alert{
+    display: none;
+    color: red;
+}
+.review-container .show{
+    display: block;
+}
+.review-container .google-reviews p{
+    /* text-align: center; */
+    font-size: 18px;
+}
+.review-container .line {
+    border-top: 1px solid black;
+    margin-bottom: 1rem;
+}
+.review-container .write-review{
+    width: 15vw;
+    height: 6vh;  
+    font-size: 17px;  
+    padding: 0;
+}
+.review-container .star-rev{
+    display: flex;
+    justify-content: space-between;
+}
+.review-inputs .red{
+    color: red; 
+}
+.review-inputs .spans{
+    font-size: 20px;
+    margin-top: 1rem;
+}
+.review-inputs .span-stur{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.star{
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+.star-rev p{
+    padding: 2rem 0;
+    font-size: 1.2rem;
+}
+.review-container .stars{
+    display: flex;
+}
+.review-container .stars span{
+    font-size: 20px;
+}
+
+.review-container .review-title
+{
+    width: 50vw;
+    height: 6vh;
+}
+.review-container .review-inputs{
+    display: flex;
+    justify-content: center;
+}
+.review-container .inputs{
+    display: flex;
+    gap: 1rem;
+}
+.review-container .rev-input{
+    font-size: 17px;
+}
+.review-container textarea{
+    width: 50vw;
+    height: 20vh;
+}
+.review-container .inputs input{
+    width: 24.3vw;
+    height: 6vh;
+}
+.review-container .review-form {
+    width: 50vw; 
+}
+.review-container .review-form button{
+    width: 7vw;
+    height: 5vh;
+    font-size: 16px;
+    padding: 0;    
+}
+.review-container .post{
+display: flex;
+justify-content: end;
+}
+.review-container .review-inputs{
+    font-size: 17px;
+}
+.stur{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.reviews{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+.review {
+    margin-bottom: 7rem;
+    margin-top: 4rem;
+ }
+ .main-review{
+    color: rgb(126, 121, 121);
+ }
+.render-review{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    word-wrap: break-word;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-color: #1d1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+.name-date{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    align-content: baseline;
+}
+.name-avatar{
+    display: flex;
+    align-items: center;
+    align-content: baseline;
+    gap: 10px;
+}
+.pagination{
+    display: flex;
+    gap: 80%;
+}
+.render-review .more-review{
+    color: #1d1c1c;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 990px ) {
+.review-container {
+    padding: 0;
+    margin-top: 4rem;
+}
+}

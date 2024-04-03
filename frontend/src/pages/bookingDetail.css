@@ -1,0 +1,43 @@
+.contain{
+    /* display:flex; */
+}
+.imgs-container{
+    width: 95%;
+    margin: 0 auto;
+
+}
+.detail-img {
+    height:47vw;
+    width: 95vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.datail-container{
+    margin-top: 2rem;
+    padding: 2rem;
+    width: 700px;
+}
+.datail-container h1{
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.datail-container h3{
+    text-align: justify;
+}
+
+.details-list li:not(:last-child){
+    margin-bottom: 0.5rem;
+}
+.details-list .label,
+.details-list .value{
+font-size: 20px;
+}
+.datail-container P{
+font-size: 20px;
+margin-bottom: 1rem;
+}
+.detail-btn {
+padding-left: 2em;
+}
