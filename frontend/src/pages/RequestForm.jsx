@@ -46,7 +46,7 @@ function RequestForm({ selectedData }) {
     setLoading(true); // Set loading to true during form submission
 
     axios
-      .post('http://localhost:3000/submit-request', formData)
+      .post('http://localhost:3000/api/trip-request/submit-request', formData)
       .then((response) => {
         console.log(response.data.message); // Booking saved successfully
         // Perform any additional actions, such as displaying a success message or redirecting

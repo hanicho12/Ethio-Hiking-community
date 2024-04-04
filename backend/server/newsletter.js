@@ -5,8 +5,7 @@ const nodemailer = require('nodemailer');
 const Schema = mongoose.Schema;
 const cron = require('node-cron');
 
-const app = express();
-app.use(cors());
+const router = express.Router();
 
 mongoose.connect('mongodb+srv://EthioHiking:Ethiohikinghun12@cluster0.whictqk.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
@@ -23,9 +22,9 @@ const newsletterSchema = new Schema({
 
 const Newsletter = mongoose.model('Newsletter', newsletterSchema);
 
-app.use(express.json());
+router.use(express.json());
 
-app.get('/unsubscribe', async (req, res) => {
+router.get('/unsubscribe', async (req, res) => {
   const { email } = req.query;
 
   try {
@@ -41,7 +40,7 @@ app.get('/unsubscribe', async (req, res) => {
   }
 });
 
-app.post('/subscribe-newsletter', (req, res) => {
+router.post('/subscribe-newsletter', (req, res) => {
     const { name, email } = req.body;
 
     const newNewsletter = new Newsletter({
@@ -145,6 +144,4 @@ async function sendNewsletter() {
 
 
 
-app.listen(3000, () => {
-  console.log('server is running on port 5001');
-});
+module.exports = router;

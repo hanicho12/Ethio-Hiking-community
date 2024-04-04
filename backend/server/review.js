@@ -4,10 +4,10 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const Schema = mongoose.Schema;
+const router = express.Router();
 
-const app = express();
-app.use(cors());
-app.use(bodyParser.json());
+
+router.use(bodyParser.json());
 
 
 mongoose.connect('mongodb+srv://EthioHiking:Ethiohikinghun12@cluster0.whictqk.mongodb.net/?retryWrites=true&w=majority', {
@@ -31,7 +31,7 @@ const reviewSchema = new Schema({
 
 const Review = mongoose.model('Review', reviewSchema);
 
-app.post('/api/reviews', async (req, res) => {
+router.post('/api/reviews', async (req, res) => {
   try {
     const { title, review, name, email, verified, stars } = req.body;
     const newReview = new Review({ title, review, name, email, verified, stars });
@@ -43,7 +43,7 @@ app.post('/api/reviews', async (req, res) => {
 });
 
 
-app.get('/api/reviews', async (req, res) => {
+router.get('/api/reviews', async (req, res) => {
   try {
     const reviews = await Review.find().sort({ date: -1 });
     res.json(reviews.map(review => ({ ...review.toObject(), stars: review.stars }))); // Include the stars field in the response
@@ -52,7 +52,7 @@ app.get('/api/reviews', async (req, res) => {
   }
 });
 
-app.get('/api/reviews/count', async (req, res) => {
+router.get('/api/reviews/count', async (req, res) => {
     try {
         const count = await Review.countDocuments();
         res.json({ count });
@@ -61,7 +61,7 @@ app.get('/api/reviews/count', async (req, res) => {
     }
 });
 
-app.get('/api/reviews/average-rating', async (req, res) => {
+router.get('/api/reviews/average-rating', async (req, res) => {
     try {
         const reviews = await Review.find();
         let totalStars = 0;
@@ -77,4 +77,4 @@ app.get('/api/reviews/average-rating', async (req, res) => {
 
 
 
-app.listen(3000, () => console.log('server running on port 5000'));
+module.exports = router;

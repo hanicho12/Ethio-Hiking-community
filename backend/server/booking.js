@@ -4,8 +4,7 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const Schema = mongoose.Schema;
 
-const app = express();
-app.use(cors());
+const router = express.Router();
 
 mongoose.connect('mongodb+srv://EthioHiking:Ethiohikinghun12@cluster0.whictqk.mongodb.net/?retryWrites=true&w=majority', {
 }).then(() => {
@@ -24,9 +23,9 @@ const bookingSchema = new Schema({
 });
 const Booking = mongoose.model('Booking', bookingSchema);
 
-app.use(express.json());
+router.use(express.json());
 
-app.post('/submit-form', (req, res) => {
+router.post('/submit-form', (req, res) => {
   const { name, email, phoneNumber, numberOfHikers, preferences, title, cost } = req.body;
 
   const newBooking = new Booking({
@@ -86,6 +85,4 @@ app.post('/submit-form', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-  console.log('server is running on port 3000');
-});
+module.exports = router;

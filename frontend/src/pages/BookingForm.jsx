@@ -28,7 +28,7 @@ function BookingForm({ selectedData }) {
       return;
     }
 
-     if (numberOfHikers < 1) {
+    if (numberOfHikers < 1) {
       setError('Number of hikers must be at least 1.');
       return;
     }
@@ -47,7 +47,7 @@ function BookingForm({ selectedData }) {
     setLoading(true); // Set loading to true during form submission
 
     axios
-      .post('http://localhost:3000/submit-form', formData)
+      .post('http://localhost:3000/api/booking/submit-form', formData)
       .then((response) => {
         console.log(response.data.message); // Booking saved successfully
         // Perform any additional actions, such as displaying a success message or redirecting
