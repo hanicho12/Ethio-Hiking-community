@@ -4,9 +4,11 @@ footer{
     margin-top: 7rem;
     padding: 2rem;
 }
-.footer-container .footer-info{ 
+.footer-container{
     width: 80vw;
     margin: 0 auto;
+}
+.footer-container .footer-info{ 
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -24,9 +26,6 @@ footer h3{
 footer .gmail{
     margin-bottom: 1rem;
 }
-.review-btn{
-    background-color: red;
-}
 footer .footer-line{
     border-top: 1px solid black;
     margin-bottom: 1rem;
@@ -40,4 +39,91 @@ text-align: center;
 }
 .footer-reviews h3{
     color: #64485C;
+}
+.footer-social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    font-size: 18px;
+}
+.footer-social-links a{
+    color: #501B1D;
+}
+@media screen and (max-width: 990px) {
+
+}
+@media screen and (min-width: 1200px){
+.footer-social-links{
+    width: 170px;
+    font-size: 20px;
+}
+}
+@media screen and (min-width: 1600px){
+.footer-social-links{
+    width: 200px;
+    font-size: 20px;
+}
+}
+@media screen and (max-width: 700px){
+.footer-container .footer-info{ 
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.footer-social-links{
+    width: 200px;
+    font-size: 20px;
+}
+.footer-contact{
+    display: flex;
+}
+.contact-info{
+    margin-top: 2rem;
+    margin-left: -3rem;
+}
+.links-info,
+.review-info{
+    margin-top: 2rem;
+    /* margin-left: -5rem; */
+}
+.footer-call{
+    margin-left: 5rem;
+}
+footer h2{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 420px){
+    footer{
+        padding: 0.5rem 0 0.5rem 0;
+    }
+    .footer-container{
+        width: 80vw;
+        margin: 0 auto;
+    }
+    footer h2{
+        font-size: 16px;
+    }
+    footer h4{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 350px){
+.footer-container .footer-info{ 
+    display: block;
+}
+.footer-social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+.footer-contact{
+    display: block;
+}
+.contact-info{
+    margin:0;
+}
+.footer-call{
+    margin:0;
+}
 }

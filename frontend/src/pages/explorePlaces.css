@@ -27,7 +27,7 @@
 .explore-container h1{
 text-transform: uppercase;
 }
-.imgs{
+.explore-container .imgs{
     display: flex;
     gap: 5vw;
     margin-top: 4rem;
@@ -79,4 +79,60 @@ button{
 }
 .actitvity2{
     font-size: larger;
+}
+
+@media screen and (max-width: 1000px){
+.explore-1st{
+    display: block;
+}
+.explore-img{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+}
+.explore-1st p{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+.all-activities{
+    display: block;
+    gap: 1rem;
+}
+.last .img1, .last .img2{
+    width: 50%;
+    height: 35vh;
+    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.activities-list ul{
+    width: 100%;
+}
+.explore-container h1{
+text-align: center;
+}
+}
+@media screen and (max-width: 750px ) {
+.explore-img{
+    height: 200px;
+}
+}
+@media screen and (max-width: 400px ){
+.explore-img{
+    height: 150px;
+}
+}
+@media screen and (min-width: 1600px ){
+.explore-img{
+    width: 55vw;
+    height: 60vh;
+}
+.explore-1st p{
+    width: 30vw;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
 }

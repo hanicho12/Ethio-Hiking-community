@@ -1,4 +1,5 @@
 import React from 'react';
+import './customModal.css'
 
 function CustomModal({ message, onConfirm, onCancel }) {
   return (

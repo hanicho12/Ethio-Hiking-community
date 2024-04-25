@@ -47,7 +47,7 @@ function BookingForm({ selectedData }) {
     setLoading(true); // Set loading to true during form submission
 
     axios
-      .post('http://localhost:3000/api/booking/submit-form', formData)
+      .post('https://ethioh.onrender.com/api/booking/submit-form', formData)
       .then((response) => {
         console.log(response.data.message); // Booking saved successfully
         // Perform any additional actions, such as displaying a success message or redirecting

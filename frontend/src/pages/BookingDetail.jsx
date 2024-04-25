@@ -90,7 +90,7 @@ function BookingDetail() {
 
   return (
     <>
-      <div className='imgs-container'>
+      <div className='booking-details imgs-container'>
         <div ref={topContainer} />
         <Slider {...settings}>
           {dataItem.urls.map((url, index) => (
@@ -101,8 +101,10 @@ function BookingDetail() {
         </Slider>
       </div>
       <div className='contain'>
-        <div className='datail-container'>
-          <h1>{dataItem.title}</h1>
+                  <h1>{dataItem.title}</h1>
+
+        <div className="detail-activity">
+          <div className='detail-container'>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque enim, inventore voluptatum eos quaerat rerum odio esse pariatur eligendi iste temporibus rem explicabo nostrum aspernatur exercitationem non deleniti animi dolorem.
           </p>
           <div className=" details-list detail">
@@ -134,8 +136,16 @@ function BookingDetail() {
       </ul>
       </div>
         </div>
+        <div className='all-activities'>
+        <div className="activities-list detail">
+        <ul>
+          <li className='actitvity2'>{dataItem.activity2}</li>
+      </ul>
       </div>
-      <MapContainer center={position} zoom={8} style={{ width: '40%', height: '50vh', float: 'right', position: 'absolute', top: '800px', left: '750px' }} scrollWheelZoom={false}>
+      </div>
+        </div>
+        <div className='map-container'>
+        <MapContainer center={position} zoom={8} className='map' scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -147,6 +157,9 @@ function BookingDetail() {
           </Popup>
         </Marker>
       </MapContainer>
+      </div>
+      </div>
+      
       <div className='detail-btn'>
         <button onClick={handleBookNow} >Book Now</button>
       </div>

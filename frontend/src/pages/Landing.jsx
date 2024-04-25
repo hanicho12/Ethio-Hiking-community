@@ -11,32 +11,68 @@ import Footer from "../components/Footer";
 
 const Landing = ({scrollTo}) => {
   const [selectedOption, setSelectedOption] = useState('campHike')
-  const [showItems, setShowItems] = useState(8); 
+  const [dayHikeshowItems, setDayHikeshowItems] = useState(getInitialShowItems()); 
+  const [campHikeshowItems, setCampHikeshowItems] = useState(getInitialShowItems()); 
   const targetRef = useRef(null);
-  const lessRef = useRef(null);
-  const moreRef = useRef(null)
+  const dayHikeLessRef = useRef(null);
+  const dayHikeMoreRef = useRef(null);
+  const campHikeLessRef = useRef(null);
+  const campHikeMoreRef = useRef(null);
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
+function getInitialShowItems() {
+    return window.innerWidth < 1001 ? 8 : 9;
+  }
 
-
-  const handleShowMore = () => {
-  setShowItems(dayHike.length);
-  moreRef.current.scrollIntoView({ behavior: 'smooth' });
-
+  const dayHikeShowMore = () => {
+  setDayHikeshowItems(dayHike.length);
+  dayHikeMoreRef.current.scrollIntoView({ behavior: 'smooth' });
 };
-const handleShowLess = () => {
-  setShowItems(8);
-  lessRef.current.scrollIntoView({behavior: 'smooth'})
+  const campHikeShowMore = () => {
+    setCampHikeshowItems(campHike.length);
+    campHikeMoreRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+const dayHikeShowLess = () => {
+  if (window.innerWidth < 1001) {
+    setDayHikeshowItems(8);
+  } else {
+    setDayHikeshowItems(9);
+  }
+  dayHikeLessRef.current.scrollIntoView({behavior: 'smooth'})
+};
+const campHikeShowLess = () => {
+  if (window.innerWidth < 1001) {
+    setCampHikeshowItems(8);
+  } else {
+    setCampHikeshowItems(9);
+  }
+  campHikeLessRef.current.scrollIntoView({behavior: 'smooth'})
 };
 
 useEffect(() => {
-  if (moreRef.current) {
-    moreRef.current.scrollIntoView({ behavior: 'smooth' });
-  }
-}, [moreRef]);
+    const handleResize = () => {
+      setDayHikeshowItems(8);
+      setCampHikeshowItems(8);
+      if (window.innerWidth < 1001) {
+        setDayHikeshowItems(8);
+        setCampHikeshowItems(8);
+      }
+      else {
+        setDayHikeshowItems(9);
+        setCampHikeshowItems(9);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const settings = {
     dots: false,
     arrows: false,
@@ -47,7 +83,6 @@ useEffect(() => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
   return (
     <>
       <div className="landing-container">
@@ -82,21 +117,21 @@ useEffect(() => {
       
         <div className="places-container">
           <div className="title-container">
-          <h1>places to hike and camp</h1>
+          <h1>Places To Hike and Camp</h1>
         </div>
         <div>
       <div>
           <h4> select trip type</h4>    
     <select value={selectedOption} onChange={handleOptionChange}>
-      <option value="dayHike">Day Hike</option>
       <option value="campHike">Overnight/Camping Hike</option>
+      <option value="dayHike">Day Hike</option>
     </select>
 
     {selectedOption === "dayHike" && (
   <>
-    <div className="places-card" ref={lessRef}>
-      {dayHike.slice(0, showItems).map((item) => (
-        <div key={item.id}  className="places" ref={showItems === 8 ? moreRef : null} >
+    <div className="places-card" ref={dayHikeLessRef}>
+      {dayHike.slice(0, dayHikeshowItems).map((item) => (
+        <div key={item.id}  className="places" ref={dayHikeshowItems === 9 ? dayHikeMoreRef : null} >
           <h3>{item.title}</h3>
           <img src={item.url[0]} alt="" />
           <p>{item.desc}</p>
@@ -107,28 +142,37 @@ useEffect(() => {
       ))}
     </div>
     <div className="more-less" >
-      {showItems === 8 ? (
-        <button onClick={handleShowMore}  className="more">SHOW MORE</button>
+      {dayHikeshowItems === 9 || dayHikeshowItems === 8? (
+        <button onClick={dayHikeShowMore}  className="more">SHOW MORE</button>
       ) : (
-        <button  onClick={handleShowLess} className="less">SHOW LESS</button>
+        <button  onClick={dayHikeShowLess} className="less">SHOW LESS</button>
       )}
     </div>
   </>
 )}
     {selectedOption === "campHike" && (
-      <div className="places-card">
-        {campHike.map((item) => (
-          <div key={item.id} className="places">
-            <h3>{item.title}</h3>
-            <img src={item.url[0]} alt="" />
-            <p>{item.desc}</p>
-            <NavLink to={`/explorePlaces/${item.id}`} className='nav-link'>
+  <>
+    <div className="places-card" ref={campHikeLessRef}>
+      {campHike.slice(0, campHikeshowItems).map((item) => (
+        <div key={item.id}  className="places" ref={campHikeshowItems === 9 ? campHikeMoreRef : null} >
+          <h3>{item.title}</h3>
+          <img src={item.url[0]} alt="" />
+          <p>{item.desc}</p>
+          <NavLink to={`/explorePlaces/${item.id}`} className='nav-link'>
             <button className="card-btn">{item.btn}</button>
-            </NavLink>
-          </div>
-        ))}
-      </div>
-    )}
+          </NavLink>
+        </div>
+      ))}
+    </div>
+    <div className="more-less" >
+      {campHikeshowItems === 9 || campHikeshowItems === 8? (
+        <button onClick={campHikeShowMore}  className="more">SHOW MORE</button>
+      ) : (
+        <button  onClick={campHikeShowLess} className="less">SHOW LESS</button>
+      )}
+    </div>
+  </>
+)}
   </div>
     </div>
 </div>

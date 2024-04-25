@@ -64,7 +64,7 @@ function ReviewPage() {
   }
    handleConfirmation('Are you sure you want to post this review?', async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/review/api/reviews', {
+        const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ function ReviewPage() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/review/api/reviews');
+        const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews');
         if (response.ok) {
           const data = await response.json();
           setReviews(data);
@@ -123,7 +123,7 @@ function ReviewPage() {
    useEffect(() => {
         const fetchReviewCount = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/review/api/reviews/count');
+                const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews/count');
                 if (response.ok) {
                     const data = await response.json();
                     setReviewCount(data.count);
@@ -140,7 +140,7 @@ function ReviewPage() {
     useEffect(() => {
     const fetchAverageRating = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/review/api/reviews/average-rating');
+            const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews/average-rating');
             if (response.ok) {
                 const data = await response.json();
                 setAverageRating(data.averageRating);
@@ -182,8 +182,8 @@ function ReviewPage() {
       <div className="line"></div>
       <div className="star-rev">
         <div className="stats">
-    <h3>Total Reviews: {reviewCount}</h3>
-    <h3>Average Rating: {averageRating.toFixed(1)} out of 5</h3>
+    <p>Total Reviews: {reviewCount}</p>
+    <p>Rating: {averageRating.toFixed(1)} out of 5</p>
 </div>
         <button  ref={reviewRef} className="write-review" onClick={handleWriteReview}>
           Write A Review
@@ -224,7 +224,7 @@ function ReviewPage() {
                     );
                   })}
                   <p className="alert">
-                 ! Please give at least one star 
+                ! Please give at least one star 
                   </p>
                 </div>
                 </div>

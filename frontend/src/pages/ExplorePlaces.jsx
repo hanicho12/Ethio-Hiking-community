@@ -14,12 +14,12 @@ function ExplorePlaces() {
 
   const { id } = useParams();
   const combinedData = dayHike.concat(campHike);
-   const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   const [selectedData, setSelectedData] = useState(null);
   
   let dataItem = combinedData.find(item => item.id === parseInt(id));
 
-   const handleRequestNow = () => {
+  const handleRequestNow = () => {
     setSelectedData(dataItem);
     setShowForm(true);
     targetRef.current.scrollIntoView({ behavior: 'smooth'})
@@ -48,15 +48,6 @@ function ExplorePlaces() {
         <div className="activities-list detail">
         <ul>
           <li className='actitvity2'>{dataItem.activity2}</li>
-          {/* <li className='activity-lists'>
-          <span className="label"> Location:</span>
-          <span className="value">{dataItem.location}</span>, <span className="label">totalhike:</span>
-          <span className="value">{dataItem.totalhike}</span>, <span className="label">elevation:</span>
-          <span className="value">{dataItem.elevation}</span>, <span className="label"> TechnicalDifficulty:</span>
-          <span className="value">{dataItem.TechnicalDifficulty}</span>, <span className="label"> GoodFor:</span>
-          <span className="value">{dataItem.GoodFor}</span>, <span className="label"> costDetail:</span>
-          <span className="value">{ dataItem.costDetail}</span></li>
-          <li>{dataItem.activity3}</li> */}
       </ul>
       </div>
       <div className='last-imgs'>

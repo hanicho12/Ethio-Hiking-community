@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    /* height: 40vh; */
     margin-top: 5rem;
 }
 .form-title{
@@ -23,7 +23,15 @@ input{
 label{
     font-size: 1.2rem;
 }
-form .btn{
+.newsletter-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.newsletter .btn{
+    width: 100px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +53,17 @@ form .btn{
     width: 2rem;
     margin-right: 0.5rem;
 }
-.btn button{
-    font-size: 18px;
+
+@media screen and (max-width: 500px) {
+.newsletter{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 4rem;
+}
+input,
+.checkbox 
+{
+    width: 14rem;
+}
 }
 

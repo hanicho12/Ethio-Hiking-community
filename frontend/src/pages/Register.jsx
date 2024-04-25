@@ -34,7 +34,7 @@ const Register = () => {
     setLoading(true); // Set loading to true during form submission
 
     axios
-      .post('http://localhost:3000/api/newsletter/subscribe-newsletter', formData)
+      .post('https://ethioh.onrender.com/api/newsletter/subscribe-newsletter', formData)
       .then((response) => {
         console.log(response.data.message); // Booking saved successfully
         // Perform any additional actions, such as displaying a success message or redirecting
@@ -56,7 +56,7 @@ const Register = () => {
           <p>Check your email for more instructions.</p>
         </div>
       ) : (
-            <div className="form-container">
+            <div className="form-container newsletter">
                 <h2 className="form-title">Newsletter</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="name-email">
@@ -73,8 +73,8 @@ const Register = () => {
                         <input type="checkbox" name="checkbox" id="checkbox" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} required />
                         <label htmlFor="checkbox">Subscribe to our newsletter for exciting hiking and camping updates!</label>
                     </div>
-                    
-                    {error && <p>{error}</p>}
+                    <div className="newsletter-btn">
+                      {error && <p>{error}</p>}
           {loading ? (
             <button type="submit" disabled>
               Loading...
@@ -82,6 +82,8 @@ const Register = () => {
           ) : (
             <button className="btn" type="submit">Submit</button>
           )}
+                    </div>
+                    
                 </form>
             </div>)}
         </div>
