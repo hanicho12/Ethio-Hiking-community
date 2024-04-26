@@ -221,26 +221,36 @@ margin-bottom: 0.5rem;
   font-size: 16px;
   color: goldenrod;
 }
-
+.one{
+    display: none;
+  }
+.two{
+    display: block;
+  }
 @media screen and (min-width: 1600px ){
   .nxt{
-    width: 7ovw;
+    width: 70vw;
   }
 }
 @media screen and (max-width: 1000px ) {
+  .one{
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+  }
+  
   .article-img {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 20px ;
   }
 
   .img-container {
     width: 100%;
-    order: 2; 
   }
   .article {
     width: 100%;
-    order: 1; 
-    margin-top: 1rem;
+    margin-top:0;
     text-align: center;
   }
 .article h1{
@@ -300,6 +310,9 @@ padding: 5px;
 .nxt{
   width: 70vw;
 }
+.article .two{
+    display: none;
+  }
 }
 @media screen and (min-width: 1000px){
 .review-btn button{

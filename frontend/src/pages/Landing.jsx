@@ -86,9 +86,10 @@ useEffect(() => {
   return (
     <>
       <div className="landing-container">
+        <h1 className="one">Hike With Us</h1>
         <div className="article-img">
             <div className="article">
-          <h1>Hike With Us</h1>
+          <h1 className="two">Hike With Us</h1>
           <p className="article-detail">
             Discover the beauty of the great outdoors with our guided hiking adventures. From serene woodland trails to challenging mountain ascents, let us take you on a journey of exploration and wonder. Unplug from the hustle and bustle of daily life and reconnect with nature in its purest form. Book your adventure today and start making memories that will last a lifetime.
           </p>
@@ -182,7 +183,7 @@ useEffect(() => {
           <h1>YOUR NEXT DESTINATION</h1>
           <p>Experience the awe-inspiring beauty of nature with our premier hiking expeditions. Embark on unforgettable journeys through rugged terrains, lush forests, and majestic peaks. Our expert guides will lead you on exhilarating adventures, unveiling hidden treasures and breathtaking vistas along the way. Whether you're a seasoned trekker or a novice explorer, our meticulously curated trails offer something for everyone. Join us and immerse yourself in the wonders of the great outdoors. Your next unforgettable adventure awaits!</p>
         </div>
-        <div className="nxt-dest">
+        {/* <div className="nxt-dest">
           {
             next.map((item)=>{
               const {id,urls,title,desc,day,location,cost,btn} = item
@@ -192,7 +193,6 @@ useEffect(() => {
                   <div className="dest">
                     <img src={urls[0]} alt="" />
                     <div className="detail">
-                      {/* <h4>{desc}</h4> */}
                       <p>
                         <span className="label"> Location:</span>
                         <span className="value">{location}</span>
@@ -214,7 +214,7 @@ useEffect(() => {
               )
             })
           }
-        </div>
+        </div> */}
         </div>
         <div className="last-container">
           <div className="title-container">

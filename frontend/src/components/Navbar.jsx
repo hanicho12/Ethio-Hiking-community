@@ -1,16 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { icons } from './data';
-import './navbar.css';
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-
+import './navbar.css';
 
 
 const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false);
     const [menuIcon, setMenuIcon] = useState(<FaBars />);
-
     const toggleLinks = () => {
         setShowLinks(!showLinks);
         setMenuIcon(showLinks ? <FaBars /> : <IoCloseSharp />);
@@ -22,7 +20,6 @@ const Navbar = () => {
                 <div className='nav-header'>
                     <div>
                         <NavLink to='/'>
-                            {/* <span className="name1">ethio hiking</span> <span className="name2">& camping community</span> */}
                             <img src='/assets/logo/logo.png'alt="" />
                         </NavLink>
                     </div>

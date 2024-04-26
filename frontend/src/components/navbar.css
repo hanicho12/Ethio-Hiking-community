@@ -6,7 +6,6 @@ nav{
     text-transform: uppercase;
     padding: 2vw;
 }
-
 .nav-container{
     width: 90vw;
     margin: 0 auto;
@@ -17,7 +16,6 @@ nav{
 .nav-header img{
     width:6rem;
     object-fit: contain;
-    /* margin-top: -90px; */
 }
 .header-links{
     display: flex;
@@ -60,57 +58,53 @@ nav{
     display: block;
     padding-left: 70px;
 }
-
 .nav-header button{
     display: none;
 }
 
 
 @media screen and (max-width: 990px) {
-    .header-links {
-        display: none;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        top: 0;
-        left: -100%;
-        text-align: center;
-        padding-top: 80px;
-        transition: 0.8s ease;
-        background-color: rgb(225, 210, 210);
-        z-index: 9;
-    }
-    .nav-header img{
-        
+.header-links {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    text-align: center;
+    padding-top: 80px;
+    transition: 0.8s ease;
+    background-color: rgb(225, 210, 210);
+    z-index: 9;
+}
+.nav-header img{
     width:5rem;
     object-fit: contain;
-    /* margin-top: -90px; */
 }
- .nav-links{
+.nav-links{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
     width: 250px;
 }
- .nav-link{
+.nav-link{
 padding: 1rem 0 2rem 0;
 }
 .social-links{
     display: flex;
     width: 60vw;
-    /* padding: 4rem;  */
     margin: 0 auto;
     justify-content: space-around;
     font-size: 20px;  
 }
 .header-links {
-  display: none; /* Initially hide the header links */
-  transition: all 0.3s ease; /* Add transition for smooth animation */
+    display: none; 
+    transition: all 0.3s ease;
 }
 .header-links.show {
-  display: block;
-  left: 0; 
+    display: block;
+    left: 0; 
 }
 .nav-header button{
     display: flex; 
@@ -118,10 +112,21 @@ padding: 1rem 0 2rem 0;
     padding: 1vw;
 } 
 .nav-header {
+    margin-top: 10px ;
     width: 100%;
     display: flex;
+    /* align-items: center;
+    align-content: center; */
     justify-content: space-between;
     z-index: 999;
+}
+}
+@media screen and (max-width: 500px){
+.nav-header img{
+    width:4rem;
+}
+.nav-header{
+    /* border:red solid ; */
 }
 }
 @media screen and (min-width: 1200px){
@@ -142,6 +147,5 @@ padding: 1rem 0 2rem 0;
 .social-links{
     width: 200px;
     font-size: 20px;
-
 }
 }
