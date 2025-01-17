@@ -1,7 +1,9 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import './App.css'
-import {Landing, About, Places, BookingDetail, Register, HomeLayout,   ExplorePlaces, Error, ReviewPage } from './pages'
-import { Children } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import './App.css';
+import 'aos/dist/aos.css';
+import {Landing, About, BookingDetail, Newsletter, HomeLayout,   ExplorePlaces, Error, ReviewPage } from './pages';
 
 const router = createBrowserRouter([
   {
@@ -18,16 +20,12 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: 'places',
-        element: <Places />
-      },
-      {
         path: 'reviewPage',
         element: <ReviewPage />
       },
       {
-        path: 'register',
-        element: <Register />
+        path: 'newsletter',
+        element: <Newsletter />
       },
       {
         path: 'bookingDetail/:id',
@@ -42,8 +40,14 @@ const router = createBrowserRouter([
 ])
 
 const App  = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
+  
   return(
-  <div className='all'>
+  <div>
       <RouterProvider router={router}/>
   </div>
   )

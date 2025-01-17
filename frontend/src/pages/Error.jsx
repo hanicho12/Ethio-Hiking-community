@@ -11,7 +11,7 @@ const Error = () => {
       <div className="container">
         <div className="error-container">
           <img src="/assets/main/Error.jpg" alt="404" />
-          <div className="hh">
+          <div className="error-response">
             <Link to="/">Back Home</Link>
           </div>
         </div>

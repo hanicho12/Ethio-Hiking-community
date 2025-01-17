@@ -1,30 +1,46 @@
-
+.booking-detail-container{
+    padding-top: 2rem;
+}
 .imgs-container{
-    width: 94vw;
+    width: 90vw;
     margin: 0 auto;
 }
 .contain{
-    position: relative;
     display:block;
-    justify-content: center;
+    align-items: center;
+    align-content: center;
     gap: 60px;
-    width: 95vw;
+}
+.booking-formm{
+    width: 90vw;
     margin: 0 auto;
 }
 .detail-img {
-    height:47vw;
-    width: 95vw;
+    height: 40vw;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 1vw 10vw;
+    z-index: 2;
+}
+.slick-prev,
+.slick-next {
+    padding-top: 40px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+.slick-prev:before,
+.slick-next:before {
+    padding-left: 25px;
+    font-size: 50px;
+    color: rgb(197, 186, 186); 
 }
 .detail-activity{
-    margin-bottom: 2rem;
     display: flex;
     gap: 4rem;
     justify-content: center;
-    align-items: center;
-    align-content: center;
 }
 .detail-container, 
 .contain .all-activities{
@@ -32,9 +48,19 @@
     width: 45vw;
     text-align: justify;
 }
-.contain h1{
-    margin-top: 2rem;
-    text-decoration: underline;
+.dest-title{
+    margin-top: 4rem;
+    margin-bottom: 0;
+    margin-left: 2vw;
+    text-align: left;
+}
+.booking-detail-container .dest-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #3c763d;
+    width: 20vw;
+    margin: 0.2rem 0;
 }
 .detail-container h3{
     text-align: justify;
@@ -49,48 +75,153 @@ font-size: 20px;
 .detail-container P{
 font-size: 20px;
 margin-bottom: 1rem;
-/* text-align: justify; */
 }
 .detail-container .details-list{
 width: 40vw;
 }
 .detail-btn {
-padding-left: 2em;
+padding-left: 2vw;
 }
 .map-container{
+    margin-top: 2vw;
     position: relative;
-    width: 100%;
-    height: 350px;
-    /* border: red solid; */
+    width: 97%;
+    height: 23vw;
+    margin: 0 auto;
 }
 .map{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    /* left: 5vw; */
+    z-index: 2;
 }
-@media screen and (max-width: 1000px) {
+
+@media screen and (min-width: 1200px) {
 .detail-activity{
-    margin-bottom: 2rem;
+    margin-bottom: 1vw;
+}
+.details-list li:not(:last-child){
+    margin-bottom: 1.7vw;
+}
+.booking-detail-container .detail-btn button{
+    padding: 10px 15px;
+    font-size: 1.6vw;
+}
+.detail-container P, 
+.details-list .label,
+.details-list .value{
+    font-size: 1.6vw !important;
+}
+}
+
+@media screen and (min-width: 1600px) {
+.slick-prev:before,
+.slick-next:before {
+    font-size: 80px;
+    padding-left: 35px;
+}
+.slick-prev,
+.slick-next {
+    width: 150px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.detail-activity{
     display: block;
 }
+.contain{
+    width: 95vw;
+    margin: 0 auto;
+}
+.detail-container, 
+.contain .all-activities{
+    width: 90%;
+}
 .detail-container .details-list{
-width: 90vw;
+width: 70vw;
+margin-bottom: 80px;
+}
+.detail-container P, 
+.details-list .label,
+.details-list .value{
+font-size: 22px;
+}
+.details-list li:not(:last-child){
+    margin-bottom: 22px;
+}
+.map-container{
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 1000px) {
+.contain{
+    width: 95vw;
+    margin: 0 auto;
+}
+.detail-activity{
+    display: block;
+    max-width: 700px;
 }
 .detail-container, 
 .contain .all-activities{
     margin-top: 1rem;
-    width: 100%;
+    width: 100% ;
     text-align: justify;
 }
+.detail-container .details-list{
+width: 70vw;
+margin-bottom: 40px;
 }
-@media screen and (max-width: 500px) {
-    .imgs-container{
-    width: 80vw;
-    margin: 0 auto;
+.all-activities .actitvity2{
+    margin-top: 4rem;
+}
+.map-container{
+    width: 100%;
 }
 .map-container{
     height: 250px;
 }
 }
+
+@media screen and (max-width: 750px) {
+.slick-prev:before,
+.slick-next:before {
+font-size: 25px;
+padding-left: 38px;
+}
+.imgs-container{
+    width: 90vw ;
+}
+}
+
+@media screen and (max-width: 500px) {
+.imgs-container{
+    width: 85vw;
+    margin: 0 auto;
+}
+.dest-title{
+    margin-top: 2rem;
+}
+.detail-img {
+    height: 200px;
+    width: 100% ;
+    border-radius: 10px 60px;
+}
+.map-container{
+    height: 200px;
+}
+.dest-title{
+    padding-left: 10px;
+    font-size: 20px ;
+}
+.detail-container P, 
+.details-list .label,
+.details-list .value{
+font-size: 1rem;
+}
+}
+
+

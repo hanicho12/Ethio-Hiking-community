@@ -43,37 +43,34 @@ function RequestForm({ selectedData }) {
     };
 
     setError('');
-    setLoading(true); // Set loading to true during form submission
+    setLoading(true); 
 
     axios
       .post('https://ethioh.onrender.com/api/trip-request/submit-request', formData)
       .then((response) => {
-        console.log(response.data.message); // Booking saved successfully
-        // Perform any additional actions, such as displaying a success message or redirecting
+        console.log(response.data.message); 
         setSuccess(true);
-        setLoading(false); // Set loading to false after successful form submission
+        setLoading(false); 
       })
       .catch((error) => {
         console.error(error);
-        // Handle any errors that occurred during form submission
-        setLoading(false); // Set loading to false if an error occurred
+        setError('There was an error with your request. Please try again later.');
+        setLoading(false); 
       });
   };
 
   return (
-    <div>
+    <section className='form-section'>
       {success ? (
-        <div>
-          <h2>Request sent successfully!</h2>
-          <p>Check your email for more instructions.</p>
+        <div className='success-message'>
+          <h2>Thank you for your trip request! </h2>
+          <p>Please check your email for confirmation and further details.</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className='form-container booking-form'>
-          <div className='trip-title'>
-            <h2> request a trip to {selectedData.title}</h2>
-          </div>
-          <div className="name-email form-input">
-            <div>
+        <div className="form-container">
+          <h2 className="form-title">Request a Trip to {selectedData.title}</h2>
+          <form onSubmit={handleSubmit} className='form'>      
+            <div className="form-group">
             <label htmlFor="name">
               Name:{" "}
               <input
@@ -85,7 +82,7 @@ function RequestForm({ selectedData }) {
               />
             </label>
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -95,7 +92,7 @@ function RequestForm({ selectedData }) {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="phone">Phone Number:</label>
             <input
               type="tel"
@@ -105,7 +102,7 @@ function RequestForm({ selectedData }) {
               required
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="number">Number of Hikers:</label>
             <input
               type="number"
@@ -115,8 +112,8 @@ function RequestForm({ selectedData }) {
               required
             />
           </div>
-          <div>
-            <label htmlFor="request" className='request'>Tell Us More About  Your Request</label>
+          <div className="form-group">
+            <label htmlFor="request" className='request'>Tell Us More About Your Request:</label>
             <textarea
               type="text"
               id="request"
@@ -124,18 +121,18 @@ function RequestForm({ selectedData }) {
               onChange={(e) => setPreferences(e.target.value)}
             />
           </div>
-          </div>
-          {error && <p>{error}</p>}
+          {error && <p className="error-text">{error}</p>}
           {loading ? (
-            <button type="submit" disabled>
-              Loading...
+            <button className="submit-btn" type="submit" disabled>
+              Processing...
             </button>
           ) : (
             <button className='reserve' type="submit">Submit</button>
           )}
         </form>
+        </div>
       )}
-    </div>
+    </section>
   );
 }
 

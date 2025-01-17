@@ -1,59 +1,58 @@
-@keyframes rotate{
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.form-section {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    width: 100%;
 }
-.booking-form{
-    height: 90vh;
+.form-container{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form-section .form-group label{
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+#request{
+    width: 100%;
+    height: 80px;
+}
+.form-group input,
+.form-group input {
+    padding: 0.5rem;
 }
 .form-input input, textarea{
     width: 30rem;
     padding: 0.5rem;
 }
-.trip-title{
-    margin-bottom: 1rem;
-    margin-top: 10rem;
-    width: 70vw;
-    text-align: center;
-    text-transform: capitalize;
+
+@media(min-width: 1200px){
+.form-section .form-group label{
+    margin-bottom: 0.3vw;
+    font-size: 1.4vw;
+    color: #555;
 }
-.reserve{
+.form-section input{
+    padding: 0.7vw;
+}
+.form-input input, textarea{
     width: 30rem;
-    margin-bottom: 10rem;
-}
-#request {
-    /* width: 30rem; */
-    height: 100px;
-}
-.rotate{
-    animation-name: rotate;
-    animation-timing-function: linear;
-    transform-origin: top left;
-    animation-iteration-count: infinite;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    color: red;
-    overflow: auto;
-}
-@media screen and (max-width: 1000px) {
-.form-input input, textarea, .reserve{
-    width: 25rem;
-    padding: 0.5rem;
+    height: 8vw !important;
 }
 }
-@media screen and (max-width: 500px) {
-.form-input input, textarea, .reserve{
-    width: 20rem;
-    padding: 0.5rem;
-}
-}
-@media screen and (max-width: 350px) {
-.form-input input, textarea, .reserve{
-    width: 15rem;
-    padding: 0.5rem;
+@media (min-width: 1600px){
+.form-container {
+    max-width: 600px;
 }
 }

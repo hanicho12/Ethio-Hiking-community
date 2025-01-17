@@ -1,21 +1,22 @@
-.review-container{
+.review-container {
     width: 90vw;
     margin: 0 auto;
-    padding: 6rem;
+    padding:2vw 6rem ;
+}
+.review-container :not(:first-child){
+    font-family: 'Arial', sans-serif;
 }
 .review-container h1{
     text-align: center;
-    margin-bottom: 2rem;  
+    margin-bottom: 2vw;  
 }
 .review-container h3{
     margin-top: 1rem;  
 }
-
 .review-container .title{
     font-size: 2rem;
 }
 .review-container .desc{
-    font-size: 1.3rem;
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -27,34 +28,36 @@
     display: block;
 }
 .review-container .google-reviews p{
-    /* text-align: center; */
-    font-size: 18px;
+    margin-bottom: 1.5rem;
 }
 .review-container .line {
     border-top: 1px solid black;
     margin-bottom: 1rem;
 }
 .review-container .write-review{
-    width: 150px;
+    width: 250px;
     height: fit-content;  
     font-size: 17px;  
-    padding: 0;
+    padding: 0.5rem;
+}
+.review-form button{
+    border-radius: 5px;
+    padding: 0.5rem;
 }
 .review-container .star-rev{
     display: flex;
     justify-content: space-between;
+    padding: 0 4vw 0 4vw;
 }
 .review-container .stats p{
-    /* width: 30vw; */
     font-weight: bold;
-    font-size: 18px;
     color: black;
 }
 .review-inputs .red{
     color: red; 
 }
-.review-inputs .spans{
-    font-size: 20px;
+.review-container .spans{
+    display: flex;
     margin-top: 1rem;
 }
 .review-inputs .span-stur{
@@ -76,11 +79,9 @@
 .review-container .stars span{
     font-size: 20px;
 }
-
 .review-container .review-title
 {
     width: 50vw;
-    height: 6vh;
 }
 .review-container .review-inputs{
     display: flex;
@@ -96,20 +97,11 @@
 }
 .review-container textarea{
     width: 50vw;
-    height: 20vh;
+    border: 1px solid #ccc;
+    height: 100px;
 }
 .review-container .inputs input{
     width: 24.3vw;
-    height: 6vh;
-}
-.review-container .review-form {
-    /* width: 50vw;  */
-}
-.review-container .review-form button{
-    width: 60px;
-    height: 5vh;
-    font-size: 16px;
-    padding: 0;    
 }
 .review-container .post{
 display: flex;
@@ -127,16 +119,21 @@ justify-content: end;
     position: relative;
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 30px;
 }
 .review {
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
+    background:rgb(245, 244.9, 244.9);
+    padding: 20px;
+    border-radius: 20px;
+}
+.review:first-child{
     margin-top: 4rem;
- }
- .main-review{
+}
+.main-review{
     color: rgb(126, 121, 121);
- }
+}
 .render-review{
-    /* width: 100%; */
     font-size: 1.2rem;
     margin-top: 1rem;
     word-wrap: break-word;
@@ -150,6 +147,7 @@ justify-content: end;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center ;
     font-size: 20px;
     color: #fff;
     font-weight: bold;
@@ -166,13 +164,73 @@ justify-content: end;
     align-content: baseline;
     gap: 10px;
 }
-.pagination{
+.arrow-right, .arrow-left{
     display: flex;
-    gap: 80%;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px;
+    font-size: 17px;
+    margin-top: -9px;
+}
+.arrow-right{
+    float: right;
+}
+.arrow-left{
+    float: left;
 }
 .render-review .more-review{
+    font-size: 16px;
+    font-weight: bolder;
     color: #1d1c1c;
     cursor: pointer;
+}
+
+@media screen and (min-width: 1200px ){
+.star{
+    font-size: 2vw;
+}
+.main-review{
+    width: 50vw;
+}
+.review-container .write-review{
+    font-size: 1.3vw;
+    width: 16vw;
+}
+.review-container .review-inputs{
+    font-size: 1.5vw !important;
+}
+.review-container input{
+    padding: 0.7vw;
+}
+.review-container textarea{
+    height: 10vw;
+}
+.review-form button{
+    font-size: 1.3vw;
+    width: 10vw;
+}
+.review {
+    padding: 2vw;
+}
+.user-avatar {
+    width: 3vw;
+    height: 3vw;
+    font-size: 1.6vw;
+}
+.render-review {
+    font-size: 1.6vw;
+}
+.render-review p{
+    font-size: 1.3vw
+}
+.more-review{
+    font-size: 1.2vw !important;
+}
+.arrow-right, .arrow-left{
+    gap: 0.5vw;
+    padding: 0.5vw;
+    font-size: 1.3vw;
+}
 }
 
 @media screen and (max-width: 990px ) {
@@ -184,13 +242,16 @@ justify-content: end;
     margin-right: 20vw;
 }
 .review-container .stats p{
-    /* width: 30vw; */
     font-weight: bold;
     font-size: 16px;
     color: black;
 }
 .review-container .write-review{ 
-    font-size: 16px;  
+    font-size: 16px; 
+    width: 300px;
+}
+.review-form button{
+    font-size: 1rem; 
 }
 .review-container .inputs{
     display: block;
@@ -199,23 +260,58 @@ justify-content: end;
 .review-container .inputs input,
 .review-form .review-title,
 .review-form textarea{
-    width: 70vw;
-    /* height: 6vh; */
+    width: 60vw;
+}
 }
 
-}
 @media screen and (max-width: 500px) {
+.review-container h1{
+    margin-bottom: 1rem; 
+    margin-top: -25px; 
+}
+.review-container .google-reviews p{
+    font-size: 1rem;
+}
+.review-container .inputs input,
+.review-form .review-title,
+.review-form textarea{
+    width: 70vw;
+}
+.review-inputs .spans{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
 .review-container .star-rev{
     display: block;
 }
 .review-container .write-review{ 
     margin-left: 35vw;  
+    width: 140px !important;
 }
-.pagination{
-    display: flex;
-    gap: 70%;
+.review-container .write-review,
+.review-form button{
+    padding: 0.3rem ;
+}
+.user-avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: bold;
 }
 .name-date{
     display: block;
+}
+.review-container .desc{
+    font-size: 1rem;    
+}
+.reviews{
+    width: 99%;
+}
+.main-review{
+    width: 100%;
+}
+.arrow-right, .arrow-left{
+    font-size: 16px;
 }
 }

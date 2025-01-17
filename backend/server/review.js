@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 const Schema = mongoose.Schema;
 const router = express.Router();
 
@@ -10,9 +11,7 @@ const router = express.Router();
 router.use(bodyParser.json());
 
 
-mongoose.connect('mongodb+srv://EthioHiking:Ethiohikinghun12@cluster0.whictqk.mongodb.net/?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect(process.env.MONGO_URI, {
 }).then(() => {
   console.log('connected to mongodb');
 }).catch((error) => {

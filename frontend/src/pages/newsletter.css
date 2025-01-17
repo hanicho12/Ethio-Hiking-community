@@ -1,0 +1,173 @@
+.newsletter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+.newsletter-section :not(:first-child){
+    font-family: 'Arial', sans-serif;
+}
+.newsletter-form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+}
+.form-group label:not(:last-child) {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+.form-group input,
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  border-color: #4caf50;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.checkbox-group input {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+}
+.error-text {
+  color: red !important;
+  margin-bottom: 1rem;
+}
+.newsletter-section .btn{
+  text-align: center;
+}
+.submit-btn {
+  width: 50%;
+  padding: 0.8rem;
+  background-color: #64485C;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #9c7792;
+}
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: black;
+}
+.success-message {
+  text-align: center;
+  color: #333;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 1200px ){
+.form-title{
+  font-size:  2rem;
+}
+}
+
+@media (min-width: 1600px){
+.newsletter-form-container {
+  max-width: 500px;
+}
+.form-title{
+    font-size:  3rem;
+}
+.newsletter-section  .form-group label:not(:last-child) {
+  font-size: 1.4rem;
+}
+.newsletter-section .form-group label:last-child {
+  font-size: 1.1rem;
+}
+.newsletter-section .form-group input[type="text"],
+.newsletter-section .form-group input[type="email"] {
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+.error-text {
+  margin-bottom: 1.1rem;
+}
+.submit-btn{
+  font-size: 1.3rem;
+}
+.success-message {
+  padding: 4rem;
+  max-width: 550px;
+  font-size: 1.3rem;
+}
+.success-message p{
+  font-size: 1.2rem;
+}
+}
+
+@media (max-width: 768px) {
+.newsletter-form-container {
+  padding: 1.5rem;
+}
+.form-title {
+  font-size: 1.5rem;
+}
+.form-group input {
+  padding: 0.7rem;
+}
+.checkbox-group input {
+  margin-right: 0.5rem;
+  width: 15px;
+  height: 15px;
+}
+.submit-btn {
+  padding: 0.7rem;
+}
+}
+
+@media (max-width: 500px) {
+.newsletter-section {
+  padding: 40px 20px ;
+}
+.error-text {
+margin-bottom: 0.8rem;
+}
+.success-message {
+  font-size: 0.9rem;
+}
+.success-message p{
+  font-size: 0.9rem;
+}
+.newsletter-section button {
+  padding: 8px 10px;
+  width: 100px;
+  font-size: 1rem;
+}
+}

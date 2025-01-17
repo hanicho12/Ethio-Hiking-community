@@ -15,7 +15,6 @@ app.use('/api/newsletter', newsletterRoutes);
 app.use('/api/review', reviewRoutes);
 app.use('/api/trip-request', tripRequestRoutes);
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

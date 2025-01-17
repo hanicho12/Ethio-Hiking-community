@@ -1,16 +1,26 @@
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-p,h3{
+html {
     font-size: 16px;
 }
-#root{
+p {
+    line-height: 1.6;
 }
-ul{
-list-style: none;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+ul, ol {
+    list-style: none;
 }
 a{
-text-decoration: none;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+p{
+    line-height: 1.4;
+}
 }

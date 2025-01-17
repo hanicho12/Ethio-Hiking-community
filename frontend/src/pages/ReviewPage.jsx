@@ -1,9 +1,9 @@
-import React, {useRef, useState, useEffect } from 'react';
-import { AiOutlineStar, AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
-import { FaStar } from 'react-icons/fa';
-import CustomModal from './CustomModal';
-import './reviewPage.css';
+import {useRef, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaStar } from 'react-icons/fa';
+import { AiOutlineStar, AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
+import './reviewPage.css';
+import CustomModal from './CustomModal';
 
 function ReviewPage() {
   const [showReviewInputs, setShowReviewInputs] = useState(false);
@@ -14,7 +14,14 @@ function ReviewPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [reviewsPerPage] = useState(5);
   const [expandedReviews, setExpandedReviews] = useState([]);
+  const topContainer = useRef();
   const reviewRef = useRef(null);
+  const formRef = useRef(null)
+
+
+  useEffect(() => {
+    topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+  }, []);
   const [formData, setFormData] = useState({
     title: '',
     review: '',
@@ -29,6 +36,7 @@ function ReviewPage() {
 
   const handleWriteReview = () => {
     setShowReviewInputs(!showReviewInputs);
+    formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleStarClick = (index) => {
@@ -62,7 +70,7 @@ function ReviewPage() {
     }
     return;
   }
-   handleConfirmation('Are you sure you want to post this review?', async () => {
+  handleConfirmation('Are you sure you want to post this review?', async () => {
       try {
         const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews', {
           method: 'POST',
@@ -73,7 +81,7 @@ function ReviewPage() {
         });
         if (response.ok) {
           const data = await response.json();
-          setReviews([...reviews, data]);
+          setReviews([data, ...reviews]);
           setShowReviewInputs(false);
           setFormData({
             title: '',
@@ -91,14 +99,14 @@ function ReviewPage() {
       }
     });
   };
-  const handleNextPage = () => {
-        setCurrentPage(currentPage + 1);
-        reviewRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
 
-    const handlePrevPage = () => {
-        setCurrentPage(currentPage - 1);
+  const handleNextPage = () => {
         reviewRef.current.scrollIntoView({ behavior: 'smooth' });
+        setCurrentPage(currentPage + 1);
+    };
+    const handlePrevPage = () => {
+        reviewRef.current.scrollIntoView({ behavior: 'smooth' });
+        setCurrentPage(currentPage - 1);
     };
     const indexOfLastReview = currentPage * reviewsPerPage;
     const indexOfFirstReview = indexOfLastReview - reviewsPerPage;
@@ -120,7 +128,7 @@ function ReviewPage() {
     };
     fetchReviews();
   }, []);
-   useEffect(() => {
+  useEffect(() => {
         const fetchReviewCount = async () => {
             try {
                 const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews/count');
@@ -154,7 +162,7 @@ function ReviewPage() {
     fetchAverageRating();
 }, []);
 
- const getInitials = (name) => {
+  const getInitials = (name) => {
         return name ? name.charAt(0).toUpperCase() : '';
     };
 
@@ -162,30 +170,33 @@ function ReviewPage() {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
-            month: 'long',
+            month: 'numeric',
             day: 'numeric',
         });
     };
 
   return (
-    <div className="review-container">
-      <h1 className="title">Traveler Reviews</h1>
-      <p className="desc">
+    <div className="review-container" ref={topContainer}>
+      <div>
+        <h1 className="main-heading">Traveler Reviews</h1>
+      </div>
+      <div className='google-reviews'>
+      <p className='section-content'>We're proud to have been rated 5 stars by all travelers on <NavLink to={'https://www.google.com/search?hl=en-ET&gl=et&q=Ethio+Hiking+community,+S+Africa+St,+Addis+Ababa+1165&ludocid=877864100642163029&lsig=AB86z5X8V9xflQlw1LbtWn8tNKrj#ip=1'}>
+    Google<FaStar className="star-btn"/> 
+  </NavLink>, a testament to our dedication to providing exceptional service and unforgettable experiences. </p> 
+  
+      </div>
+      <div className="line" ref={formRef}></div>
+      <p className="section-content desc">
         Read reviews from our amazing travelers. We’re sure you’ll be inspired
         to travel with us!
       </p>
-      <div className='google-reviews'>
-      <p>We're proud to have been rated 5 stars by all travelers on <NavLink to={'https://www.google.com/search?hl=en-ET&gl=et&q=Ethio+Hiking+community,+S+Africa+St,+Addis+Ababa+1165&ludocid=877864100642163029&lsig=AB86z5X8V9xflQlw1LbtWn8tNKrj#ip=1'}>
-    Google <FaStar className="star-btn"/> 
-  </NavLink> , a testament to our dedication to providing exceptional service and unforgettable experiences. </p> 
-      </div>
-      <div className="line"></div>
       <div className="star-rev">
-        <div className="stats">
+        <div className="stats section-content">
     <p>Total Reviews: {reviewCount}</p>
     <p>Rating: {averageRating.toFixed(1)} out of 5</p>
 </div>
-        <button  ref={reviewRef} className="write-review" onClick={handleWriteReview}>
+        <button className="write-review submit-btn" onClick={handleWriteReview}>
           Write A Review
         </button>
       </div>
@@ -194,8 +205,8 @@ function ReviewPage() {
 
       {showReviewInputs && (
         <div className="review-inputs">
-          <div>
-            <div>
+          <div >
+            <div >
               <div className='spans'>
                 <span className='red'>*</span> <span >Indicates a required field</span>
               </div>
@@ -233,11 +244,10 @@ function ReviewPage() {
             <form onSubmit={handleSubmit} className="review-form">
               <div>
                 <div className="spans">
-                  <span className='red'>*</span> <span>Title:</span>
+                <span>Title:</span>
                 </div>
-                <div>
+                <div className='form-group'>
                   <input
-                  required
                     className="review-title rev-input"
                     type="text"
                     name="title"
@@ -250,7 +260,7 @@ function ReviewPage() {
                 <div className="spans">
                   <span className='red'>*</span> <span>Review:</span>
                 </div>
-                <div>
+                <div className='form-group'>
                   <textarea
                   required
                     className='rev-input'
@@ -264,9 +274,9 @@ function ReviewPage() {
               <div className="inputs">
                 <div>
                   <div className="spans">
-                    <span className='red'>*</span> <span>Use Your Name:</span>
+                    <span className='red'>*</span> <span>Name:</span>
                   </div>
-                  <div>
+                  <div className='form-group'>
                     <input
                     required
                       className='rev-input'
@@ -281,7 +291,7 @@ function ReviewPage() {
                   <div className='spans'>
                     <span className='red'>*</span> <span>Email:</span>
                   </div>
-                  <div>
+                  <div className='form-group'>
                     <input
                     required
                     className='rev-input'
@@ -310,7 +320,7 @@ function ReviewPage() {
           </div>
         </div>
       )}
-      <div className="reviews">
+      <div className="reviews" ref={reviewRef} >
         {currentReviews.map((review, index) => (
           <div className="review" key={index}>
             <div className="name-date">
@@ -320,8 +330,7 @@ function ReviewPage() {
               <strong>{review.name}</strong> 
             </div>
             <div className='render-review'>
-              <p>{review.verified}
-</p> 
+              <p>{review.verified}</p> 
             </div>
             </div>
             <div className='render-review date'>
@@ -344,11 +353,11 @@ function ReviewPage() {
             </div>
             <div className='render-review main-review'>
                             <span>
-                                {expandedReviews.includes(index) || review.review.length <= 500
+                                {expandedReviews.includes(index) || review.review.length <= 400
                                     ? review.review
-                                    : review.review.substring(0, 500) + '...'}
+                                    : review.review.substring(0, 400) + '...'}
                             </span>
-                            {review.review.length > 500 && (
+                            {review.review.length > 400 && (
                                 <span className='more-review' onClick={() => setExpandedReviews(prevState => {
                                     if (prevState.includes(index)) {
                                         return prevState.filter(item => item !== index);
@@ -364,13 +373,17 @@ function ReviewPage() {
         ))}
         {reviews.length > reviewsPerPage && (
                 <div className="pagination">
-                    <button onClick={handlePrevPage} disabled={currentPage === 1}>
-                        <AiOutlineArrowLeft />
-                    </button>
-                    <button onClick={handleNextPage} disabled={indexOfLastReview >= reviews.length}>
-                        <AiOutlineArrowRight />
-                    </button>
-                </div>
+                    {currentPage > 1 && (
+            <button className='arrow-left' onClick={handlePrevPage}>
+              <AiOutlineArrowLeft />  Prev
+            </button>
+        )}
+        {indexOfLastReview < reviews.length && (
+            <button className='arrow-right' onClick={handleNextPage}>
+              Next  <AiOutlineArrowRight />
+            </button>
+        )}
+            </div>
             )}
       </div>
     </div>
