@@ -46,7 +46,7 @@ function BookingForm({ selectedData }) {
     setLoading(true); 
 
     axios
-      .post('https://ethioh.onrender.com/api/booking/submit-form', formData)
+      .post('https://ethiohikingcommunity.com/api/booking/submit-form', formData)
       .then((response) => {
         console.log(response.data.message); 
         setSuccess(true);

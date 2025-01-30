@@ -26,7 +26,6 @@ const Navbar = () => {
                                 <img src='/assets/logo/favicon.png' alt='Ethio Hiking Community Logo' />
                             </picture>
                         </NavLink>
-
                     </div>
                     <div>
                         <button onClick={toggleLinks}>

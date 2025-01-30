@@ -33,7 +33,7 @@ function ExplorePlaces() {
             <p>
               {dataItem.mainDesc}
             </p>
-          <div className='explore-img single-img1' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${dataItem.url[1]})` }} />
+          <div className='explore-img single-img1' style={{ backgroundImage: `url(${dataItem.url[1]})` }} />
           </div>
             </div>
       
@@ -43,8 +43,8 @@ function ExplorePlaces() {
       </div>
       
       <div className="imgs">
-        <div className='explore-img' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${dataItem.url[2]})` }} />
-      <div className='explore-img' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${dataItem.url[3]})` }} />
+        <div className='explore-img' style={{ backgroundImage: `url(${dataItem.url[2]})` }} />
+      <div className='explore-img' style={{ backgroundImage: `url(${dataItem.url[3]})` }} />
       </div>
       <div className='all-activities'>
         <div className="activities-list detail">
@@ -56,9 +56,9 @@ function ExplorePlaces() {
       <div className='last-imgs'>
         
         <div className='last'>
-          <div className='img1' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${dataItem.url[4]})` }} />
-          <div className='img2' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${dataItem.url[5]})` }} /></div>
-          <div className='explore-img single-img2' style={{ backgroundImage: `url(${import.meta.env.BASE_URL}${dataItem.url[7]})` }} />
+          <div className='img1' style={{ backgroundImage: `url(${dataItem.url[4]})` }} />
+          <div className='img2' style={{ backgroundImage: `url(${dataItem.url[5]})` }} /></div>
+          <div className='explore-img single-img2' style={{ backgroundImage: `url(${dataItem.url[7]})` }} />
       </div>
       </div>
       <button className='small' onClick={handleRequestNow}>Request a Trip</button>

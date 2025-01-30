@@ -72,7 +72,7 @@ function ReviewPage() {
   }
   handleConfirmation('Are you sure you want to post this review?', async () => {
       try {
-        const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews', {
+        const response = await fetch('https://ethiohikingcommunity.com/api/review/api/reviews', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ function ReviewPage() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews');
+        const response = await fetch('https://ethiohikingcommunity.com/api/review/api/reviews');
         if (response.ok) {
           const data = await response.json();
           setReviews(data);
@@ -131,7 +131,7 @@ function ReviewPage() {
   useEffect(() => {
         const fetchReviewCount = async () => {
             try {
-                const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews/count');
+                const response = await fetch('https://ethiohikingcommunity.com/api/review/api/reviews/count');
                 if (response.ok) {
                     const data = await response.json();
                     setReviewCount(data.count);
@@ -148,7 +148,7 @@ function ReviewPage() {
     useEffect(() => {
     const fetchAverageRating = async () => {
         try {
-            const response = await fetch('https://ethioh.onrender.com/api/review/api/reviews/average-rating');
+            const response = await fetch('https://ethiohikingcommunity.com/api/review/api/reviews/average-rating');
             if (response.ok) {
                 const data = await response.json();
                 setAverageRating(data.averageRating);

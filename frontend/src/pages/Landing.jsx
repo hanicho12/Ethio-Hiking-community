@@ -211,7 +211,7 @@ const Landing = () => {
         </div>
         <div className="nxt-dest">
           {next.map((item) => {
-            const { id, urls, title, desc, day, location, cost, btn } = item;
+            const { id, urls, title, desc, day, location, cost, btn, highlights  } = item;
             return (
               <div key={id} data-aos-once="true" data-aos="fade-up-right" className="dest-container">
                 <h3 className="title">{desc}</h3>
@@ -227,8 +227,8 @@ const Landing = () => {
                       <span className="value">{day}</span>
                     </p>
                     <p>
-                      <span className="label"> Cost:</span>
-                      <span className="value">{cost}</span>
+                      <span className="label"> Highlights:</span>
+                      <span className="value">{highlights}</span>
                     </p>
                     <NavLink to={`/bookingDetail/${id}`} className='nav-link'>
                       <button>{btn}</button>

@@ -46,7 +46,7 @@ function RequestForm({ selectedData }) {
     setLoading(true); 
 
     axios
-      .post('https://ethioh.onrender.com/api/trip-request/submit-request', formData)
+      .post('https://ethiohikingcommunity.com/api/trip-request/submit-request', formData)
       .then((response) => {
         console.log(response.data.message); 
         setSuccess(true);

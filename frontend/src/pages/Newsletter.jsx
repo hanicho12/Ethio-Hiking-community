@@ -33,7 +33,7 @@ const Newsletter = () => {
     setLoading(true); 
 
     axios
-      .post('http://localhost:3000/api/newsletter/subscribe-newsletter', formData)
+      .post('https://ethiohikingcommunity.com/api/newsletter/subscribe-newsletter', formData)
       .then((response) => {
         setSuccess(true);
         setLoading(false); 

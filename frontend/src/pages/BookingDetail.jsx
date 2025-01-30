@@ -51,7 +51,7 @@ function BookingDetail() {
     autoplaySpeed: 4000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    initialSlide: 0
+    initialSlide: 1
   };
 
   const { id } = useParams();
@@ -109,56 +109,96 @@ function BookingDetail() {
           ))}
         </Slider>
       </div>
-      <h1 className="dest-title form-title">Day Hiking trip to {dataItem.title}</h1>
+      <h1 className="dest-title form-title"> {dataItem.desc}</h1>
       <div className="contain">
         <div className="detail-activity">
           <div className="detail-container">
-            <p>{dataItem.mainDesc}</p>
-            <div className="details-list detail">
-              <ul>
-                <li>
-                  <span className="label"> Location:</span>
-                  <span className="value">{dataItem.location}</span>
-                </li>
-                <li>
-                  <span className="label">Hiking Day:</span>
-                  <span className="value">{dataItem.day}</span>
-                </li>
-                <li>
-                  <span className="label">Total Hike:</span>
-                  <span className="value">{dataItem.totalhike}</span>
-                </li>
-                <li>
-                  <span className="label">Elevation:</span>
-                  <span className="value">{dataItem.elevation}</span>
-                </li>
-                <li>
-                  <span className="label">Technical Difficulty:</span>
-                  <span className="value">{dataItem.TechnicalDifficulty}</span>
-                </li>
-                <li>
-                  <span className="label">Good For:</span>
-                  <span className="value">{dataItem.GoodFor}</span>
-                </li>
-                <li>
-                  <span className="label">Cost Detail:</span>
-                  <span className="value">{dataItem.costDetail}</span>
-                </li>
-                <li>
-                  <span className="label">Meeting Location:</span>
-                  <span className="value">{dataItem.meetingLocation}</span>
-                </li>
-                <li>
-                  <span className="label">Meeting Time:</span>
-                  <span className="value">{dataItem.meetingtime}</span>
-                </li>
-                <li>
-                  <span className="label">Estimated return time to Addis:</span>
-                  <span className="value">{dataItem.returnTime}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+      {dataItem.mainDesc && <p>{dataItem.mainDesc}</p>}
+      <div className="details-list detail">
+        <ul>
+          {dataItem.location && (
+            <li>
+              <span className="label">Location:</span>
+              <span className="value">{dataItem.location}</span>
+            </li>
+          )}
+          {dataItem.day && (
+            <li>
+              <span className="label">Hiking Day:</span>
+              <span className="value">{dataItem.day}</span>
+            </li>
+          )}
+          {dataItem.totalhike && (
+            <li>
+              <span className="label">Total Hike:</span>
+              <span className="value">{dataItem.totalhike}</span>
+            </li>
+          )}
+          {dataItem.elevation && (
+            <li>
+              <span className="label">Elevation:</span>
+              <span className="value">{dataItem.elevation}</span>
+            </li>
+          )}
+          {dataItem.TechnicalDifficulty && (
+            <li>
+              <span className="label">Technical Difficulty:</span>
+              <span className="value">{dataItem.TechnicalDifficulty}</span>
+            </li>
+          )}
+          {dataItem.GoodFor && (
+            <li>
+              <span className="label">Good For:</span>
+              <span className="value">{dataItem.GoodFor}</span>
+            </li>
+          )}
+          {dataItem.costDetail && (
+            <li>
+              <span className="label">Package includes:</span>
+              <span className="value">{dataItem.costDetail}</span>
+            </li>
+          )}
+          {dataItem.whatToBring && (
+            <li>
+              <span className="label">What to Bring:</span>
+              <span className="value">{dataItem.whatToBring}</span>
+            </li>
+          )}
+          {dataItem.itinerary && dataItem.itinerary.length > 0 && (
+  <li>
+    <p className="label itinerary-title">Itinerary:</p>
+    <ul className="itinerary-container">
+      {dataItem.itinerary.map((dayItinerary, index) => (
+        <li key={index}>
+          <h3 className="itinerary">Day {index + 1}</h3>
+          <span className="value">{dayItinerary}</span>
+        </li>
+      ))}
+    </ul>
+  </li>
+)}
+
+          {dataItem.meetingLocation && (
+            <li>
+              <span className="label">Meeting Location:</span>
+              <span className="value">{dataItem.meetingLocation}</span>
+            </li>
+          )}
+          {dataItem.meetingtime && (
+            <li>
+              <span className="label">Meeting Time:</span>
+              <span className="value">{dataItem.meetingtime}</span>
+            </li>
+          )}
+          {dataItem.returnTime && (
+            <li>
+              <span className="label">Estimated return time to Addis:</span>
+              <span className="value">{dataItem.returnTime}</span>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
           <div className="all-activities">
             <div className="activities-list detail">
               <ul>

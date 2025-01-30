@@ -54,7 +54,8 @@ router.post('/subscribe-newsletter', async (req, res) => {
       html: `<strong>Dear ${name || 'Valued Subscriber'},</strong>
         <p>Thank you for subscribing to our newsletter! We're thrilled to have you with us.</p>
         <p>By joining our community, you'll receive the latest updates on upcoming hikes, exclusive tips, and insider knowledge about the best hiking spots. Stay tuned for exciting content, trip recommendations, and special offers!</p>
-        <br /><p>Best regards,</p> The Ethio Hiking Community`
+        <br /><p>Best regards,</p> 
+        <span><strong>Ethio Hiking Community</strong></span>`
     };
 
     const senderMailOptions = {
@@ -67,7 +68,7 @@ router.post('/subscribe-newsletter', async (req, res) => {
         <br />
         <br />
         <p>Best regards,</p>
-        The Ethio Hiking Community`
+        <span><strong>Ethio Hiking Community</strong></span>`
     };
 
     await transporter.sendMail(mailOptions);

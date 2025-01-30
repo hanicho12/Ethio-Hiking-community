@@ -40,7 +40,7 @@ function Footer() {
     setLoading(true);
 
     axios
-      .post('http://localhost:3000/api/newsletter/subscribe-newsletter', { email })
+      .post('https://ethiohikingcommunity.com/api/newsletter/subscribe-newsletter', { email })
       .then((response) => {
         setSuccess(true);
         setLoading(false);

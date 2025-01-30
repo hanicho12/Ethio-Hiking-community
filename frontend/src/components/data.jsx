@@ -54,75 +54,75 @@ export const list = [
     },
     {
         id: 2,
-        url:'assets/one/main24.jpg'
-    },
-    {
-        id: 3,
-        url:'assets/one/main21.jpg'
-    },
-    {
-        id:4,
-        url:'assets/one/main25.jpg'
-    },
-    {
-        id:5,
-        url:'assets/one/main22.jpg'
-    },
-    {
-        id:6,
-        url:'assets/one/main23.jpg'
-    },
-    {
-        id:7,
-        url:'assets/one/main1.jpg'
-    },
-    {
-        id:8,
-        url:'assets/one/main2.jpg'
-    },
-    {
-        id:9,
-        url:'assets/one/main3.jpg'
-    },
-    {
-        id:10,
-        url:'assets/one/main5.jpg'
-    },
-    {
-        id:11,
-        url:'assets/one/main12.jpg'
-    },
-    {
-        id:12,
-        url:'assets/one/main18.jpg'
-    },
-    {
-        id:13,
-        url:'assets/one/main17.jpg'
-    },
-    {
-        id:14,
         url:'assets/one/main14.jpg'
     },
     {
-        id:15,
+        id: 3,
+        url:'assets/one/main25.jpg'
+    },
+    {
+        id:4,
+        url:'assets/one/main1.jpg'
+    },
+    {
+        id:5,
+        url:'assets/one/main21.jpg'
+    },
+    {
+        id:6,
+        url:'assets/one/main2.jpg'
+    },
+    {
+        id:7,
+        url:'assets/one/main18.jpg'
+    },
+    {
+        id:8,
+        url:'assets/one/main5.jpg'
+    },
+    {
+        id:9,
         url:'assets/one/main15.jpg'
     },
     {
-        id:16,
-        url:'assets/one/main16.jpg'
-    },
-    {
-        id:17,
-        url:'assets/one/main10.jpg'
-    },
-    {
-        id:18,
+        id:10,
         url:'assets/one/main9.jpg'
     },
     {
-        id:19,
+        id:11,
+        url:'assets/one/main17.jpg'
+    },
+    {
+        id:12,
+        url:'assets/one/main24.jpg'
+    },
+    {
+        id:13,
+        url:'assets/one/main12.jpg'
+    },
+    {
+        id:14,
+        url:'assets/one/main10.jpg'
+    },
+    {
+        id:15,
         url:'assets/one/main6.jpg'
+    },
+    {
+        id:16,
+        url:'assets/one/main3.jpg'
+    },
+    {
+        id:17,
+        url:'assets/one/main23.jpg'
+    },
+    {
+        id:18,
+        url:'assets/one/main22.jpg'
+    },
+    {
+        id:19,
+        url:'assets/one/main16.jpg'
     },    
 ]
 
@@ -160,7 +160,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url: ['assets/mountBerrek/barrak1.jpg','assets/mountBerrek/barrak2.jpg','assets/mountBerrek/barrak4.jpg','assets/mountBerrek/barrak3.jpg','assets/mountBerrek/barrak5.jpg','assets/mountBerrek/barrak8.jpg','assets/mountBerrek/barrak7.jpg','assets/mountBerrek/barrak6.jpg'],
+        url: ['/assets/mountBerrek/barrak1.jpg','/assets/mountBerrek/barrak2.jpg','/assets/mountBerrek/barrak4.jpg','/assets/mountBerrek/barrak3.jpg','/assets/mountBerrek/barrak5.jpg','/assets/mountBerrek/barrak8.jpg','/assets/mountBerrek/barrak7.jpg','/assets/mountBerrek/barrak6.jpg'],
         btn: 'Explore'
     },
     {
@@ -189,7 +189,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url: ['assets/mogleMountain/mogle1.jpg','assets/mogleMountain/mogle8.jpg','assets/mogleMountain/mogle3.jpg','assets/mogleMountain/mogle4.jpg','assets/mogleMountain/mogle5.jpg','assets/mogleMountain/mogle6.jpg','assets/mogleMountain/mogle7.jpg','assets/mogleMountain/mogle1.jpg',],
+        url: ['/assets/mogleMountain/mogle1.jpg','/assets/mogleMountain/mogle8.jpg','/assets/mogleMountain/mogle3.jpg','/assets/mogleMountain/mogle4.jpg','/assets/mogleMountain/mogle5.jpg','/assets/mogleMountain/mogle6.jpg','/assets/mogleMountain/mogle7.jpg','/assets/mogleMountain/mogle1.jpg',],
         btn: 'Explore'
     },
     {
@@ -218,7 +218,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url: ['assets/portugueseBridge/portuguese1.jpg','assets/portugueseBridge/portuguese9.jpg','assets/portugueseBridge/portuguese3.jpg','assets/portugueseBridge/portuguese2.jpg','assets/portugueseBridge/portuguese5.jpg','assets/portugueseBridge/portuguese6.jpg','assets/portugueseBridge/portuguese7.jpg','assets/portugueseBridge/portuguese8.jpg',],
+        url: ['/assets/portugueseBridge/portuguese1.jpg','/assets/portugueseBridge/portuguese9.jpg','/assets/portugueseBridge/portuguese3.jpg','/assets/portugueseBridge/portuguese2.jpg','/assets/portugueseBridge/portuguese5.jpg','/assets/portugueseBridge/portuguese6.jpg','/assets/portugueseBridge/portuguese7.jpg','/assets/portugueseBridge/portuguese8.jpg',],
         btn: 'Explore'
     },
 
@@ -248,7 +248,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/yererM/yerer3.jpg','assets/yererM/yerer1.jpg','assets/yererM/yerer2.jpg','assets/yererM/yerer4.jpg','assets/yererM/yerer5.jpg','assets/yererM/yerer6.jpg','assets/yererM/yerer7.jpg','assets/yererM/yerer8.jpg',],
+        url:['/assets/yererM/yerer3.jpg','/assets/yererM/yerer1.jpg','/assets/yererM/yerer2.jpg','/assets/yererM/yerer4.jpg','/assets/yererM/yerer5.jpg','/assets/yererM/yerer6.jpg','/assets/yererM/yerer7.jpg','/assets/yererM/yerer8.jpg',],
         btn: 'Explore'
     },
     {
@@ -277,7 +277,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/direSekoru/direSekoru1.jpg','assets/direSekoru/direSekoru2.jpg','assets/direSekoru/direSekoru3.jpg','assets/direSekoru/direSekoru4.jpg','assets/direSekoru/direSekoru5.jpg','assets/direSekoru/direSekoru6.jpg','assets/direSekoru/direSekoru7.jpg','assets/direSekoru/direSekoru8.jpg',],
+        url:['/assets/direSekoru/direSekoru1.jpg','/assets/direSekoru/direSekoru2.jpg','/assets/direSekoru/direSekoru3.jpg','/assets/direSekoru/direSekoru4.jpg','/assets/direSekoru/direSekoru5.jpg','/assets/direSekoru/direSekoru6.jpg','/assets/direSekoru/direSekoru7.jpg','/assets/direSekoru/direSekoru8.jpg',],
         btn: 'Explore'
     },
     {
@@ -307,7 +307,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/ensaro/ensaro1.jpg','assets/ensaro/ensaro2.jpg','assets/ensaro/ensaro3.jpg','assets/ensaro/ensaro4.jpg','assets/ensaro/ensaro5.jpg','assets/ensaro/ensaro6.jpg','assets/ensaro/ensaro7.jpg','assets/ensaro/ensaro8.jpg',],
+        url:['/assets/ensaro/ensaro1.jpg','/assets/ensaro/ensaro2.jpg','/assets/ensaro/ensaro3.jpg','/assets/ensaro/ensaro4.jpg','/assets/ensaro/ensaro5.jpg','/assets/ensaro/ensaro6.jpg','/assets/ensaro/ensaro7.jpg','/assets/ensaro/ensaro8.jpg',],
         btn: 'Explore'
     },
     {
@@ -336,7 +336,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/greenLake/greenLake1.jpg','assets/greenLake/greenLake9.jpg','assets/greenLake/greenLake3.jpg','assets/greenLake/greenLake4.jpg','assets/greenLake/greenLake5.jpg','assets/greenLake/greenLake11.jpg','assets/greenLake/greenLake11.jpg','assets/greenLake/greenLake10.jpg',],
+        url:['/assets/greenLake/greenLake1.jpg','/assets/greenLake/greenLake9.jpg','/assets/greenLake/greenLake3.jpg','/assets/greenLake/greenLake4.jpg','/assets/greenLake/greenLake5.jpg','/assets/greenLake/greenLake11.jpg','/assets/greenLake/greenLake11.jpg','/assets/greenLake/greenLake10.jpg',],
         btn: 'Explore'
     },
     {
@@ -364,7 +364,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/damochaM/damocha1.jpg','assets/damochaM/damocha2.jpg','assets/damochaM/damocha3.jpg','assets/damochaM/damocha4.jpg','assets/damochaM/damocha5.jpg','assets/damochaM/damocha6.jpg','assets/damochaM/damocha7.jpg','assets/damochaM/damocha9.jpg',],
+        url:['/assets/damochaM/damocha1.jpg','/assets/damochaM/damocha2.jpg','/assets/damochaM/damocha3.jpg','/assets/damochaM/damocha4.jpg','/assets/damochaM/damocha5.jpg','/assets/damochaM/damocha6.jpg','/assets/damochaM/damocha7.jpg','/assets/damochaM/damocha9.jpg',],
         btn: 'Explore'
     },
     {
@@ -392,7 +392,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/abaSamuel/abasam1.jpg','assets/abaSamuel/abasam4.jpg','assets/abaSamuel/abasam3.jpg','assets/abaSamuel/abasam6.jpg','assets/abaSamuel/abasam5.jpg','assets/abaSamuel/abasam2.jpg','assets/abaSamuel/abasam7.jpg','assets/abaSamuel/abasam8.jpg',],
+        url:['/assets/abaSamuel/abasam1.jpg','/assets/abaSamuel/abasam4.jpg','/assets/abaSamuel/abasam3.jpg','/assets/abaSamuel/abasam6.jpg','/assets/abaSamuel/abasam5.jpg','/assets/abaSamuel/abasam2.jpg','/assets/abaSamuel/abasam7.jpg','/assets/abaSamuel/abasam8.jpg',],
         btn: 'Explore'
     },
     {
@@ -419,7 +419,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/kessem/kessem1.jpg','assets/kessem/kessem2.jpg','assets/kessem/kessem8.jpg','assets/kessem/kessem4.jpg','assets/kessem/kessem5.jpg','assets/kessem/kessem10.jpg','assets/kessem/kessem7.jpg','assets/kessem/kessem3.jpg',],
+        url:['/assets/kessem/kessem1.jpg','/assets/kessem/kessem2.jpg','/assets/kessem/kessem8.jpg','/assets/kessem/kessem4.jpg','/assets/kessem/kessem5.jpg','/assets/kessem/kessem10.jpg','/assets/kessem/kessem7.jpg','/assets/kessem/kessem3.jpg',],
         btn: 'Explore'
     },
     {
@@ -446,7 +446,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/kersaM/kersa2.jpg','assets/kersaM/kersa1.jpg','assets/kersaM/kersa3.jpg','assets/kersaM/kersa4.jpg','assets/kersaM/kersa5.jpg','assets/kersaM/kersa6.jpg','assets/kersaM/kersa7.jpg','assets/kersaM/kersa8.jpg',],
+        url:['/assets/kersaM/kersa2.jpg','/assets/kersaM/kersa1.jpg','/assets/kersaM/kersa3.jpg','/assets/kersaM/kersa4.jpg','/assets/kersaM/kersa5.jpg','/assets/kersaM/kersa6.jpg','/assets/kersaM/kersa7.jpg','/assets/kersaM/kersa8.jpg',],
         btn: 'Explore'
     },
     {
@@ -474,7 +474,7 @@ export const dayHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url:['assets/wechechaM/wechecha1.jpg','assets/wechechaM/wechecha2.jpg','assets/wechechaM/wechecha3.jpg','assets/wechechaM/wechecha4.jpg','assets/wechechaM/wechecha5.jpg','assets/wechechaM/wechecha1.jpg','assets/wechechaM/wechecha7.jpg','assets/wechechaM/wechecha8.jpg',],
+        url:['/assets/wechechaM/wechecha1.jpg','/assets/wechechaM/wechecha2.jpg','/assets/wechechaM/wechecha3.jpg','/assets/wechechaM/wechecha4.jpg','/assets/wechechaM/wechecha5.jpg','/assets/wechechaM/wechecha1.jpg','/assets/wechechaM/wechecha7.jpg','/assets/wechechaM/wechecha8.jpg',],
         btn: 'Explore'
     },
 ]
@@ -507,7 +507,7 @@ export const campHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
         </>),
-        url: ['assets/wenchi/wenchi21.jpg','assets/wenchi/wenchi3.jpg','assets/wenchi/wenchi4.jpg','assets/wenchi/wenchi5.jpg','assets/wenchi/wenchi6.jpg','assets/wenchi/wenchi7.jpg','assets/wenchi/wenchi1.jpg','assets/wenchi/wenchi8.jpg',],
+        url: ['/assets/wenchi/wenchi21.jpg','/assets/wenchi/wenchi3.jpg','/assets/wenchi/wenchi4.jpg','/assets/wenchi/wenchi5.jpg','/assets/wenchi/wenchi6.jpg','/assets/wenchi/wenchi7.jpg','/assets/wenchi/wenchi1.jpg','/assets/wenchi/wenchi8.jpg',],
         btn: 'Explore'
     },
     {
@@ -535,38 +535,35 @@ export const campHike = [
                 ))}
             </>),
         
-        url: ['assets/danakilD/danakil2.jpg','assets/danakilD/danakil6.jpg','assets/danakilD/danakil3.jpg','assets/danakilD/danakil5.jpg','assets/danakilD/danakil9.jpg','assets/danakilD/danakil10.jpg','assets/danakilD/danakil9.jpg','assets/danakilD/danakil4.jpg',],
+        url: ['/assets/danakilD/danakil2.jpg','/assets/danakilD/danakil6.jpg','/assets/danakilD/danakil3.jpg','/assets/danakilD/danakil5.jpg','/assets/danakilD/danakil9.jpg','/assets/danakilD/danakil10.jpg','/assets/danakilD/danakil9.jpg','/assets/danakilD/danakil4.jpg',],
         btn: 'Explore'
     },
     {
-        id: 15,
-        title: 'Suba Menagesha Park',
-        desc: 'Explore one of the largest remaining patches of indigenous montane forest in Ethiopia and is recognized as a UNESCO Biosphere Reserve.',
-        mainDesc:`The Suba Menagesha Forest is a protected area located near the city of Addis Ababa in Ethiopia. It is commonly known as Menagesha Suba Forest or simply Menagesha Forest. This forest is one of the oldest and largest remaining patches of indigenous montane forest in Ethiopia and is recognized as a UNESCO Biosphere Reserve.\n\nThe Menagesha Suba Forest is renowned for its biodiversity, with a variety of plant and animal species found within its boundaries. `.split('\n').map((line, index) => (
+        id:15,
+        title: 'Omo Valley',
+        desc: 'The Omo Valley is a captivating destination that offers a unique blend of cultural immersion, natural beauty, and anthropological intrigue.',
+        mainDesc:`The Omo Valley is a region located in southwestern Ethiopia, known for its cultural diversity, traditional tribes, and stunning landscapes. The Omo Valley has become a popular destination for ethnographic tourism, attracting visitors from around the world who are interested in experiencing traditional tribal cultures firsthand. \n\nThe Omo Valley is home to numerous ethnic groups, each with its own distinct language, customs, and traditions. Some of the prominent tribes in the region include the Hamar, Mursi, Karo, Banna, Dassanech, and Arbore. These tribes have preserved their unique way of life for centuries, making the Omo Valley a fascinating destination for cultural exploration.`.split('\n').map((line, index) => (
     <React.Fragment key={index}>
     {line}
     <br />
     </React.Fragment>
     )),
-    activity1:'Menagesha Suba Forest offers a tranquil escape into nature and a variety of activities for visitors to enjoy. ',
+    activity1:'The Omo Valley offers a wide range of activities for travelers seeking cultural immersion, adventure, and exploration in one of Africa\'s most culturally diverse and visually stunning regions.',
         activity2:(
             <>
-<StrongText>The activities we engage while visiting Menagesha Suba Forest are:</StrongText> <br /><br />
+<StrongText>Here are some activities we engage while visiting Omo Valley:</StrongText> <br /><br />
                 {[
-                    { title: 'Hiking', description: 'The forest is crisscrossed with hiking trails that wind through its lush greenery. Lace up your hiking boots and explore the diverse flora and fauna of Menagesha Suba Forest while breathing in the fresh air.'},
-                    { title: 'Picnicking', description: 'There are designated picnic areas where you can relax amidst the natural beauty of the surroundings.' },
-                    { title: ' Birdwatching', description: 'Menagesha Suba Forest is home to a rich avian diversity, making it a paradise for birdwatchers. Keep an eye out for colorful species such as the Ethiopian Oriole, Abyssinian Woodpecker, and White-cheeked Turaco as you stroll through the forest.' },
-                    { title: 'Botanical Exploration', description: 'The forest is home to a wide variety of plant species, including many endemic to Ethiopia.' },
-                    { title: 'Visiting the Historic Church', description: 'Explore the Debre Libanos monastery\'s ancient architecture and learn about its significance in Ethiopian history and religious tradition.' },
+                    { title: 'Cultural Immersion', description: 'The Omo Valley is renowned for its diverse ethnic groups and traditional tribes. Visitors can immerse themselves in the rich cultural tapestry of the region by visiting villages, interacting with local communities, and participating in cultural ceremonies and rituals. This might include attending traditional dances, witnessing bull jumping ceremonies, or observing intricate body adornment practices.'},
+                    { title: 'Photography', description: 'The vibrant cultures, colorful attire, and picturesque landscapes of the Omo Valley offer endless opportunities for photography enthusiasts. Visitors can capture stunning images of tribal people, traditional ceremonies, and the stunning natural scenery of the region.' },
+                    { title: 'River Cruises and Wildlife Viewing', description: 'The Omo River, which flows through the valley, provides opportunities for boat cruises and wildlife viewing. Visitors can spot hippos, crocodiles, and a variety of bird species along the riverbanks while enjoying the scenic beauty of the surrounding landscape.' },
+                    { title: 'Hiking and Trekking', description: 'The Omo Valley offers opportunities for hiking and trekking through its rugged terrain. Exploring the region on foot allows visitors to experience the natural beauty of the valley up close and enjoy panoramic views of the surrounding mountains and river valleys.' },
                 ].map((activity, index) => (
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
-            </>
-            ),
-        url: ['assets/subaPark/suba31.jpg','assets/subaPark/suba1.jpg','assets/subaPark/suba2.jpg','assets/subaPark/suba4.jpg','assets/subaPark/suba6.jpg','assets/subaPark/suba7.jpg','assets/subaPark/suba6.jpg','assets/subaPark/suba5.jpg'],
+            </>),
+        url:['/assets/omoValley/omo2.jpg','/assets/omoValley/omo1.jpg','/assets/omoValley/omo3.jpg','/assets/omoValley/omo9.jpg','/assets/omoValley/omo11.jpg','/assets/omoValley/omo6.jpg','/assets/omoValley/omo7.jpg','/assets/omoValley/omo5.jpg'],
         btn: 'Explore'
     },
-
     {
         id:16,
         title: 'Chebera Churchura National Park',
@@ -593,40 +590,11 @@ export const campHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
             </>),
-        url:['assets/chebera/chebera6.jpg','assets/chebera/chebera4.jpg','assets/chebera/chebera11.jpg','assets/chebera/chebera7.jpg','assets/chebera/chebera3.jpg','assets/chebera/chebera12.jpg','assets/chebera/chebera8.jpg','assets/chebera/chebera8.jpg'],
+        url:['/assets/chebera/chebera6.jpg','/assets/chebera/chebera4.jpg','/assets/chebera/chebera11.jpg','/assets/chebera/chebera7.jpg','/assets/chebera/chebera3.jpg','/assets/chebera/chebera12.jpg','/assets/chebera/chebera8.jpg','/assets/chebera/chebera8.jpg'],
         btn: 'Explore'
     },
-
     {
         id:17,
-        title: 'Awash Park & Doho Lodge',
-        desc: 'Doho Lodge is a popular eco-lodge located near the Awash National Park. Awash National Park is located in the Afar Region of Ethiopia,',
-        mainDesc:`The Awash National Park is a protected area located in the Afar Region of northeastern Ethiopia. It is one of the oldest and most established national parks in Ethiopia, established in 1966. The park encompasses diverse landscapes, including acacia woodlands, savannah plains, and the rugged Awash River gorge, which gives the park its name. \n\nDoho Lodge is a popular eco-lodge located near the Awash National Park in Ethiopia. It offers visitors a comfortable and serene accommodation option amidst the natural beauty of the area. The lodge is known for its unique architecture, which blends traditional Ethiopian design elements with modern amenities.`.split('\n').map((line, index) => (
-    <React.Fragment key={index}>
-    {line}
-    <br />
-    </React.Fragment>
-    )),
-    activity1:'Awash National Park, located in the Afar Region of Ethiopia, is a diverse and scenic park that offers visitors a range of activities to enjoy. Doho Lodge is a popular accommodation option within the park.',
-        activity2:(
-            <>
-<StrongText>Here are some activities we engage while visiting Awash National Park and staying at Doho Lodge:</StrongText> <br /><br />
-                {[
-                    { title: 'Wildlife Safari', description: 'Awash National Park is home to a variety of wildlife, including East African oryx, Soemmering\'s gazelle, baboons, kudus, warthogs, and numerous bird species.'},
-                    { title: 'Birdwatching', description: 'The park is a haven for birdwatchers, with over 450 species of birds recorded.' },
-                    { title: 'Nature Walks', description: 'Embark on guided nature walks led by experienced park rangers to explore the park\'s scenic landscapes, including savannah plains, acacia woodlands, and the picturesque Awash River Gorge.' },
-                    { title: 'Visit to the Awash Falls', description: 'Marvel at the majestic Awash Falls, where the Awash River plunges into a gorge, forming a beautiful waterfall.' },
-                    { title: 'Relaxation at Doho Lodge', description: 'After a day of adventure in the park, unwind and relax at Doho Lodge, which offers comfortable accommodations amidst tranquil surroundings. Enjoy delicious meals at the lodge\'s restaurant, take a dip in the swimming pool, or simply soak in the serene ambiance of the lodge\'s grounds.' },
-                    { title: 'Camping', description: 'Camping at designated campsites within Awash National Park for a more immersive experience in nature.' },
-                ].map((activity, index) => (
-                    <Activity key={index} title={activity.title} description={activity.description} />
-                ))}
-            </>),
-        url:['assets/dohoLodge/doho21.jpg','assets/dohoLodge/doho8.jpg','assets/dohoLodge/doho3.jpg','assets/dohoLodge/doho9.jpg','assets/dohoLodge/doho11.jpg','assets/dohoLodge/doho10.jpg','assets/dohoLodge/doho10.jpg','assets/dohoLodge/doho1.jpg'],
-        btn: 'Explore'
-    },
-    {
-        id:18,
         title: 'Bale Mountains',
         desc: 'The Bale Mountains National Park is a national park in the Oromia region of southeast Ethiopia.',
         mainDesc:`The Bale Mountains, also known as the Bale Mountains National Park, is a protected area located in the southeastern part of Ethiopia. It is one of the largest Afro-alpine habitats in Africa and is renowned for its stunning landscapes, diverse ecosystems, and rich biodiversity.\n\nThe Bale Mountains National Park encompasses a range of habitats, including montane forests, alpine moorlands, and grasslands. It is home to a wide variety of flora and fauna, including many endemic species. Some of the notable wildlife found in the park includes the Ethiopian wolf, the mountain nyala, the Bale monkey, and numerous bird species.`.split('\n').map((line, index) => (
@@ -650,64 +618,11 @@ export const campHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
             </>),
-        url:['assets/baleM/bale1.jpg','assets/baleM/bale3.jpg','assets/baleM/bale2.jpg','assets/baleM/bale6.jpg','assets/baleM/bale9.jpg','assets/baleM/bale4.jpg','assets/baleM/bale4.jpg','assets/baleM/bale5.jpg',],
+        url:['/assets/baleM/bale1.jpg','/assets/baleM/bale3.jpg','/assets/baleM/bale2.jpg','/assets/baleM/bale6.jpg','/assets/baleM/bale9.jpg','/assets/baleM/bale4.jpg','/assets/baleM/bale4.jpg','/assets/baleM/bale5.jpg',],
         btn: 'Explore'
     },
     {
-        id:19,
-        title: 'Omo Valley',
-        desc: 'The Omo Valley is a captivating destination that offers a unique blend of cultural immersion, natural beauty, and anthropological intrigue.',
-        mainDesc:`The Omo Valley is a region located in southwestern Ethiopia, known for its cultural diversity, traditional tribes, and stunning landscapes. The Omo Valley has become a popular destination for ethnographic tourism, attracting visitors from around the world who are interested in experiencing traditional tribal cultures firsthand. \n\nThe Omo Valley is home to numerous ethnic groups, each with its own distinct language, customs, and traditions. Some of the prominent tribes in the region include the Hamar, Mursi, Karo, Banna, Dassanech, and Arbore. These tribes have preserved their unique way of life for centuries, making the Omo Valley a fascinating destination for cultural exploration.`.split('\n').map((line, index) => (
-    <React.Fragment key={index}>
-    {line}
-    <br />
-    </React.Fragment>
-    )),
-    activity1:'The Omo Valley offers a wide range of activities for travelers seeking cultural immersion, adventure, and exploration in one of Africa\'s most culturally diverse and visually stunning regions.',
-        activity2:(
-            <>
-<StrongText>Here are some activities we engage while visiting Omo Valley:</StrongText> <br /><br />
-                {[
-                    { title: 'Cultural Immersion', description: 'The Omo Valley is renowned for its diverse ethnic groups and traditional tribes. Visitors can immerse themselves in the rich cultural tapestry of the region by visiting villages, interacting with local communities, and participating in cultural ceremonies and rituals. This might include attending traditional dances, witnessing bull jumping ceremonies, or observing intricate body adornment practices.'},
-                    { title: 'Photography', description: 'The vibrant cultures, colorful attire, and picturesque landscapes of the Omo Valley offer endless opportunities for photography enthusiasts. Visitors can capture stunning images of tribal people, traditional ceremonies, and the stunning natural scenery of the region.' },
-                    { title: 'River Cruises and Wildlife Viewing', description: 'The Omo River, which flows through the valley, provides opportunities for boat cruises and wildlife viewing. Visitors can spot hippos, crocodiles, and a variety of bird species along the riverbanks while enjoying the scenic beauty of the surrounding landscape.' },
-                    { title: 'Hiking and Trekking', description: 'The Omo Valley offers opportunities for hiking and trekking through its rugged terrain. Exploring the region on foot allows visitors to experience the natural beauty of the valley up close and enjoy panoramic views of the surrounding mountains and river valleys.' },
-                ].map((activity, index) => (
-                    <Activity key={index} title={activity.title} description={activity.description} />
-                ))}
-            </>),
-        url:['assets/omoValley/omo2.jpg','assets/omoValley/omo1.jpg','assets/omoValley/omo3.jpg','assets/omoValley/omo9.jpg','assets/omoValley/omo11.jpg','assets/omoValley/omo6.jpg','assets/omoValley/omo7.jpg','assets/omoValley/omo5.jpg'],
-        btn: 'Explore'
-    },
-    {
-        id:20,
-        title: 'Gheralta Mountains',
-        desc: 'Explore the ancient rock-hewn churches carved into the cliffs and caves of the Gheralta Mountains.',
-        mainDesc:`The Gheralta Mountains are a range located in the Tigray region of northern Ethiopia. They are renowned for their unique geological formations, historical significance, and religious heritage. \n\nThe Gheralta Mountains are characterized by their striking sandstone cliffs, spires, and rock towers, which have been sculpted by erosion over millions of years. The landscape is rugged and dramatic, with towering peaks and deep valleys, making it a popular destination for adventure seekers and rock climbers. The mountains are also considered sacred by the local community, who believe them to be inhabited by spirits and divine beings.`.split('\n').map((line, index) => (
-    <React.Fragment key={index}>
-    {line}
-    <br />
-    </React.Fragment>
-    )),
-    activity1:'The Gheralta Mountains offer a wide range of activities for travelers seeking adventure, cultural immersion, spiritual exploration, and appreciation of nature\'s beauty in Ethiopia.',
-        activity2:(
-            <>
-<StrongText>The activities we engage while visiting Gheralta Mountains are:</StrongText> <br /><br />
-                {[
-                    { title: 'Visit Rock-Hewn Churches', description: ' Explore the ancient rock-hewn churches carved into the cliffs and caves of the Gheralta Mountains. These churches, adorned with intricate frescoes and carvings, offer a glimpse into Ethiopia\'s rich Christian heritage and are significant pilgrimage sites for Orthodox Christians.'},
-                    { title: 'Hiking and Trekking', description: 'Embark on hiking and trekking adventures through the rugged terrain of the Gheralta Mountains. Discover scenic trails that lead to ancient churches, monasteries, panoramic viewpoints, and hidden valleys, offering unforgettable outdoor experiences and opportunities to appreciate the natural beauty of the region.' },
-                    { title: ' Rock Climbing', description: 'For adventure enthusiasts, the Gheralta Mountains provide excellent rock climbing opportunities. Test your skills and challenge yourself on the sandstone cliffs, spires, and rock towers that characterize the landscape of the region.' },
-                    { title: 'Cultural Encounters', description: ' Interact with the local community and learn about their customs, traditions, and way of life. Participate in cultural tours, visit villages, and engage with residents to gain insights into the rich cultural heritage of the Gheralta Mountains.'},
-                    { title: 'Photography', description: ' Capture the stunning landscapes, ancient churches, and vibrant cultural scenes of the Gheralta Mountains through photography.'},
-                ].map((activity, index) => (
-                    <Activity key={index} title={activity.title} description={activity.description} />
-                ))}
-            </>),
-        url:['assets/gheraltaMountain/gheralta3.jpg','assets/gheraltaMountain/gheralta2.jpg','assets/gheraltaMountain/gheralta8.jpg','assets/gheraltaMountain/gheralta12.jpg','assets/gheraltaMountain/gheralta14.jpg','assets/gheraltaMountain/gheralta5.jpg','assets/gheraltaMountain/gheralta7.jpg','assets/gheraltaMountain/gheralta11.jpg',],
-        btn: 'Explore'
-    },
-    {
-        id:21,
+        id:18,
         title: 'Simien Mountains',
         desc: 'The Simien Mountains is renowned for its stunning landscapes, unique geological formations, and diverse wildlife.',
         mainDesc:`The Simien Mountains, also known as the Simien Mountains National Park, is a UNESCO World Heritage Site located in northern Ethiopia. It is renowned for its stunning landscapes, unique geological formations, and diverse wildlife. \n\nThe Simien Mountains are characterized by dramatic escarpments, deep valleys, and sharp peaks, including Ras Dashen, the highest peak in Ethiopia. The park is home to a variety of endemic species, including the Walia ibex, the Ethiopian wolf, and the Gelada baboon. It also supports a rich birdlife, with numerous bird species found within its boundaries.`.split('\n').map((line, index) => (
@@ -730,7 +645,91 @@ export const campHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
             </>),
-        url:['assets/semienM/semien2.jpg','assets/semienM/semien3.jpg','assets/semienM/semien1.jpg','assets/semienM/semien4.jpg','assets/semienM/semien8.jpg','assets/semienM/semien6.jpg','assets/semienM/semien6.jpg','assets/semienM/semien7.jpg',],
+        url:['/assets/semienM/semien2.jpg','/assets/semienM/semien3.jpg','/assets/semienM/semien1.jpg','/assets/semienM/semien4.jpg','/assets/semienM/semien8.jpg','/assets/semienM/semien6.jpg','/assets/semienM/semien6.jpg','/assets/semienM/semien7.jpg',],
+        btn: 'Explore'
+    },
+    {
+        id: 19,
+        title: 'Suba Menagesha Park',
+        desc: 'Explore one of the largest remaining patches of indigenous montane forest in Ethiopia and is recognized as a UNESCO Biosphere Reserve.',
+        mainDesc:`The Suba Menagesha Forest is a protected area located near the city of Addis Ababa in Ethiopia. It is commonly known as Menagesha Suba Forest or simply Menagesha Forest. This forest is one of the oldest and largest remaining patches of indigenous montane forest in Ethiopia and is recognized as a UNESCO Biosphere Reserve.\n\nThe Menagesha Suba Forest is renowned for its biodiversity, with a variety of plant and animal species found within its boundaries. `.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+    {line}
+    <br />
+    </React.Fragment>
+    )),
+    activity1:'Menagesha Suba Forest offers a tranquil escape into nature and a variety of activities for visitors to enjoy. ',
+        activity2:(
+            <>
+<StrongText>The activities we engage while visiting Menagesha Suba Forest are:</StrongText> <br /><br />
+                {[
+                    { title: 'Hiking', description: 'The forest is crisscrossed with hiking trails that wind through its lush greenery. Lace up your hiking boots and explore the diverse flora and fauna of Menagesha Suba Forest while breathing in the fresh air.'},
+                    { title: 'Picnicking', description: 'There are designated picnic areas where you can relax amidst the natural beauty of the surroundings.' },
+                    { title: ' Birdwatching', description: 'Menagesha Suba Forest is home to a rich avian diversity, making it a paradise for birdwatchers. Keep an eye out for colorful species such as the Ethiopian Oriole, Abyssinian Woodpecker, and White-cheeked Turaco as you stroll through the forest.' },
+                    { title: 'Botanical Exploration', description: 'The forest is home to a wide variety of plant species, including many endemic to Ethiopia.' },
+                    { title: 'Visiting the Historic Church', description: 'Explore the Debre Libanos monastery\'s ancient architecture and learn about its significance in Ethiopian history and religious tradition.' },
+                ].map((activity, index) => (
+                    <Activity key={index} title={activity.title} description={activity.description} />
+                ))}
+            </>
+            ),
+        url: ['/assets/subaPark/suba31.jpg','/assets/subaPark/suba1.jpg','/assets/subaPark/suba2.jpg','/assets/subaPark/suba4.jpg','/assets/subaPark/suba6.jpg','/assets/subaPark/suba7.jpg','/assets/subaPark/suba6.jpg','/assets/subaPark/suba5.jpg'],
+        btn: 'Explore'
+    },
+    {
+        id:20,
+        title: 'Awash Park & Doho Lodge',
+        desc: 'Doho Lodge is a popular eco-lodge located near the Awash National Park. Awash National Park is located in the Afar Region of Ethiopia,',
+        mainDesc:`The Awash National Park is a protected area located in the Afar Region of northeastern Ethiopia. It is one of the oldest and most established national parks in Ethiopia, established in 1966. The park encompasses diverse landscapes, including acacia woodlands, savannah plains, and the rugged Awash River gorge, which gives the park its name. \n\nDoho Lodge is a popular eco-lodge located near the Awash National Park in Ethiopia. It offers visitors a comfortable and serene accommodation option amidst the natural beauty of the area. The lodge is known for its unique architecture, which blends traditional Ethiopian design elements with modern amenities.`.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+    {line}
+    <br />
+    </React.Fragment>
+    )),
+    activity1:'Awash National Park, located in the Afar Region of Ethiopia, is a diverse and scenic park that offers visitors a range of activities to enjoy. Doho Lodge is a popular accommodation option within the park.',
+        activity2:(
+            <>
+<StrongText>Here are some activities we engage while visiting Awash National Park and staying at Doho Lodge:</StrongText> <br /><br />
+                {[
+                    { title: 'Wildlife Safari', description: 'Awash National Park is home to a variety of wildlife, including East African oryx, Soemmering\'s gazelle, baboons, kudus, warthogs, and numerous bird species.'},
+                    { title: 'Birdwatching', description: 'The park is a haven for birdwatchers, with over 450 species of birds recorded.' },
+                    { title: 'Nature Walks', description: 'Embark on guided nature walks led by experienced park rangers to explore the park\'s scenic landscapes, including savannah plains, acacia woodlands, and the picturesque Awash River Gorge.' },
+                    { title: 'Visit to the Awash Falls', description: 'Marvel at the majestic Awash Falls, where the Awash River plunges into a gorge, forming a beautiful waterfall.' },
+                    { title: 'Relaxation at Doho Lodge', description: 'After a day of adventure in the park, unwind and relax at Doho Lodge, which offers comfortable accommodations amidst tranquil surroundings. Enjoy delicious meals at the lodge\'s restaurant, take a dip in the swimming pool, or simply soak in the serene ambiance of the lodge\'s grounds.' },
+                    { title: 'Camping', description: 'Camping at designated campsites within Awash National Park for a more immersive experience in nature.' },
+                ].map((activity, index) => (
+                    <Activity key={index} title={activity.title} description={activity.description} />
+                ))}
+            </>),
+        url:['/assets/dohoLodge/doho21.jpg','/assets/dohoLodge/doho8.jpg','/assets/dohoLodge/doho3.jpg','/assets/dohoLodge/doho9.jpg','/assets/dohoLodge/doho11.jpg','/assets/dohoLodge/doho10.jpg','/assets/dohoLodge/doho10.jpg','/assets/dohoLodge/doho1.jpg'],
+        btn: 'Explore'
+    },
+    
+    {
+        id:21,
+        title: 'Gheralta Mountains',
+        desc: 'Explore the ancient rock-hewn churches carved into the cliffs and caves of the Gheralta Mountains.',
+        mainDesc:`The Gheralta Mountains are a range located in the Tigray region of northern Ethiopia. They are renowned for their unique geological formations, historical significance, and religious heritage. \n\nThe Gheralta Mountains are characterized by their striking sandstone cliffs, spires, and rock towers, which have been sculpted by erosion over millions of years. The landscape is rugged and dramatic, with towering peaks and deep valleys, making it a popular destination for adventure seekers and rock climbers. The mountains are also considered sacred by the local community, who believe them to be inhabited by spirits and divine beings.`.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+    {line}
+    <br />
+    </React.Fragment>
+    )),
+    activity1:'The Gheralta Mountains offer a wide range of activities for travelers seeking adventure, cultural immersion, spiritual exploration, and appreciation of nature\'s beauty in Ethiopia.',
+        activity2:(
+            <>
+<StrongText>The activities we engage while visiting Gheralta Mountains are:</StrongText> <br /><br />
+                {[
+                    { title: 'Visit Rock-Hewn Churches', description: ' Explore the ancient rock-hewn churches carved into the cliffs and caves of the Gheralta Mountains. These churches, adorned with intricate frescoes and carvings, offer a glimpse into Ethiopia\'s rich Christian heritage and are significant pilgrimage sites for Orthodox Christians.'},
+                    { title: 'Hiking and Trekking', description: 'Embark on hiking and trekking adventures through the rugged terrain of the Gheralta Mountains. Discover scenic trails that lead to ancient churches, monasteries, panoramic viewpoints, and hidden valleys, offering unforgettable outdoor experiences and opportunities to appreciate the natural beauty of the region.' },
+                    { title: ' Rock Climbing', description: 'For adventure enthusiasts, the Gheralta Mountains provide excellent rock climbing opportunities. Test your skills and challenge yourself on the sandstone cliffs, spires, and rock towers that characterize the landscape of the region.' },
+                    { title: 'Cultural Encounters', description: ' Interact with the local community and learn about their customs, traditions, and way of life. Participate in cultural tours, visit villages, and engage with residents to gain insights into the rich cultural heritage of the Gheralta Mountains.'},
+                    { title: 'Photography', description: ' Capture the stunning landscapes, ancient churches, and vibrant cultural scenes of the Gheralta Mountains through photography.'},
+                ].map((activity, index) => (
+                    <Activity key={index} title={activity.title} description={activity.description} />
+                ))}
+            </>),
+        url:['/assets/gheraltaMountain/gheralta3.jpg','/assets/gheraltaMountain/gheralta2.jpg','/assets/gheraltaMountain/gheralta8.jpg','/assets/gheraltaMountain/gheralta12.jpg','/assets/gheraltaMountain/gheralta14.jpg','/assets/gheraltaMountain/gheralta5.jpg','/assets/gheraltaMountain/gheralta7.jpg','/assets/gheraltaMountain/gheralta11.jpg',],
         btn: 'Explore'
     },
     {
@@ -758,7 +757,7 @@ export const campHike = [
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
             </>),
-        url:['assets/arbaMinch/arba3.jpg', 'assets/arbaMinch/arba1.jpg','assets/arbaMinch/arba2.jpg','assets/arbaMinch/arba4.jpg','assets/arbaMinch/arba10.jpg','assets/arbaMinch/arba6.jpg','assets/arbaMinch/arba7.jpg','assets/arbaMinch/arba5.jpg',],
+        url:['/assets/arbaMinch/arba3.jpg', '/assets/arbaMinch/arba1.jpg','/assets/arbaMinch/arba2.jpg','/assets/arbaMinch/arba4.jpg','/assets/arbaMinch/arba10.jpg','/assets/arbaMinch/arba6.jpg','/assets/arbaMinch/arba7.jpg','/assets/arbaMinch/arba5.jpg',],
         btn: 'Explore'
     },
     {
@@ -782,92 +781,81 @@ export const campHike = [
                     { title: 'Birdwatching', description: ' Keep an eye out for species such as African fish eagles, pelicans, herons, and kingfishers as you explore the lake\'s shores and nearby wetlands.' },
                     { title: 'Nature Walks and Hiking', description: 'Take leisurely walks along the lake\'s sandy shores or venture into the surrounding acacia woodlands for hiking opportunities.'},
                     { title: 'Sunbathing and Relaxation', description: ' Set up a beach towel or lounge chair by the lakeshore and soak up the sun.'},
+                    { title: 'Camping', description: 'Camp overnight near Lake Langano for a more immersive experience in nature.' },
                 ].map((activity, index) => (
                     <Activity key={index} title={activity.title} description={activity.description} />
                 ))}
             </>),
-        url:['assets/langano/langano1.jpg','assets/langano/langano2.jpg','assets/langano/langano3.jpg','assets/langano/langano4.jpg','assets/langano/langano10.jpg','assets/langano/langano8.jpg','assets/langano/langano7.jpg','assets/langano/langano9.jpg'],
+        url:['/assets/langano/langano1.jpg','/assets/langano/langano2.jpg','/assets/langano/langano3.jpg','/assets/langano/langano4.jpg','/assets/langano/langano10.jpg','/assets/langano/langano8.jpg','/assets/langano/langano7.jpg','/assets/langano/langano9.jpg'],
         btn: 'Explore'
     },    
 ]
 export const next = [
+    // {
+    //     id: 1,
+    //     title: 'Suba Menagesha Park',
+    //     desc: 'Day Hiking trip to Suba Menagesha Park',
+    //     mainDesc: campHike.find(item => item.title === 'Suba Menagesha Park').desc,
+    //     btn: 'Details',
+    //     urls: ['/assets/subaPark/suba31.jpg','/assets/subaPark/suba1.jpg','/assets/subaPark/suba2.jpg','/assets/subaPark/suba4.jpg','/assets/subaPark/suba6.jpg','/assets/subaPark/suba7.jpg','/assets/subaPark/suba6.jpg','/assets/subaPark/suba5.jpg'],
+    //     day: 'Jan 26, 2025',
+    //     location: '40km south east of Addis Ababa',
+    //     elevation: '1585 m.a.s.l',
+    //     TechnicalDifficulty: '8/10',
+    //     GoodFor: 'all level of hikers',
+    //     ht: 'cost',
+    //     cost: 1500,
+    //     costDetail: '1500 ETB, which includes transportation by bus, lunch, tea, coffee, entrance fee, and a guide.',
+    //     meetingLocation:'Megenagna at Kaldi\'s coffe',
+    //     meetingtime: '7:30 AM',
+    //     returnTime: '5:00 PM.',
+    //     position: [8.969972, 38.593526],
+    //     activity2: campHike.find(item => item.title === 'Suba Menagesha Park').activity2,
+    //     btn: 'Details'
+    // },
     {
         id: 1,
-        title: 'Kassem Gorge/Maru Waterfall',
-        desc: 'Day hiking trip to Kassem Gorge/ Maru waterfall',
-        mainDesc: dayHike.find(item => item.title === 'Kassem Gorge').desc,
+        title: 'Lake Langano',
+        desc: 'Camping trip to Lake Langano',
+        mainDesc: campHike.find(item => item.title === 'Lake Langano').desc,
         btn: 'Details',
-        urls: ['/assets/main/next.jpg','/assets/main/dest1.jpg','/assets/main/dest3.jpg','/assets/main/dest4.jpg','/assets/main/dest5.jpg'],
-        day: 'Sep 10, 2023',
-        location: '40km North East of Addis Ababa',
-        totalhike: '12Km',
-        elevation: '2514 m.a.s.l',
-        TechnicalDifficulty: '6/10',
+        urls: ['/assets/nxtDest/langano/langano1.jpg','/assets/nxtDest/langano/langano14.jpg','/assets/nxtDest/langano/langano2.jpg','/assets/nxtDest/langano/langano4.jpg','/assets/nxtDest/langano/langano3.jpg','/assets/nxtDest/langano/langano10.jpg','/assets/nxtDest/langano/langano8.jpg','/assets/nxtDest/langano/langano9.jpg','/assets/nxtDest/langano/langano13.jpg','/assets/nxtDest/langano/langano12.jpg'],
+        day: 'Feb 1 & 2, 2025',
+        location: '200km south of Addis Ababa',
+        // totalhike: 'up to 5km',
+        elevation: '1585 m.a.s.l',
+        // TechnicalDifficulty: '2/10',
         GoodFor: 'all level of hikers',
-        cost: 1500,
-        costDetail: '1500 ETB, which includes transportation by bus, lunch, tea, coffee, entrance fee, and a guide.',
-        meetingLocation:'Megenagna at Kaldi\'s coffe',
-        meetingtime: '7:30 AM',
-        returnTime: '5:00 PM.',
-        position: [9.153488, 39.196649],
-        activity2: dayHike.find(item => item.title === 'Kassem Gorge').activity2,
+        // cost: 1500,
+        highlights: 'Guided tour, meals, transportation',
+        whatToBring: ' Swimwear, extra clothes, blanket/sleeping bag, hiking shoes, sunscreen, and a hat.',
+        costDetail: 'transportation by bus, meals and water, snacks and coffee/tea, entrance fee, camping gear and a guide.',
+        itinerary:['Early departure from Addis with breakfast at Ziway, a visit to Shalla National Park, and camping with a campfire at Lake Langano.', 'Stargazing and games, breakfast, swimming and relaxation, followed by lunch, packing up, and returning to Addis.'],
+        // meetingLocation:'Megenagna at Kaldi\'s coffe',
+        // meetingtime: '7:30 AM',
+        // returnTime: '5:00 PM.',
+        position: [7.5932, 38.7578],
+        activity2: campHike.find(item => item.title === 'Lake Langano').activity2,
         btn: 'Details'
     },
     {
         id: 2,
-        title: 'arba minch',
-        desc: 'Day Hiking trip to Yerer Mountains',
-        urls: ['assets/arbaMinch/arba1.jpg', 'assets/arbaMinch/arba3.jpg','assets/arbaMinch/arba2.jpg','assets/arbaMinch/arba4.jpg','assets/arbaMinch/arba5.jpg'],
-        day: 'Sep 10, 2023',
-        location: '40km North East of Addis Ababa',
-        totalhike: '12Km',
-        elevation: '2514 m.a.s.l',
-        TechnicalDifficulty: '6/10',
-        GoodFor: 'all level of hikers',
-        cost: 1500,
-        costDetail: '1500 ETB, which includes transportation by bus, lunch, tea, coffee, entrance fee, and a guide.',
-        meetingLocation:'Megenagna at Kaldi\'s coffe',
-        meetingtime: '7:30 AM',
-        returnTime: '5:00 PM.',
-        position: [6.034995, 37.557309],
-        btn: 'Details'
-    },
-    {
-        id: 3,
-        title: 'semien mountains',
-        desc: 'Day Hiking trip to Yerer Mountains',
-        urls: ['assets/semienM/semien1.jpg','assets/semienM/semien2.jpg','assets/semienM/semien1.jpg','assets/semienM/semien4.jpg','assets/semienM/semien5.jpg',],
-        day: 'Sep 10, 2023',
-        location: '40km North East of Addis Ababa',
-        totalhike: '12Km',
-        elevation: '2514 m.a.s.l',
-        TechnicalDifficulty: '6/10',
-        GoodFor: 'all level of hikers',
-        cost: 1500,
-        costDetail: '1500 ETB, which includes transportation by bus, lunch, tea, coffee, entrance fee, and a guide.',
-        meetingLocation:'Megenagna at Kaldi\'s coffe',
-        meetingtime: '7:30 AM',
-        returnTime: '5:00 PM.',
-        position: [8.890009, 38.958877],
-        btn: 'Details'
-    },
-    {
-        id: 4,
-        title: 'langano lake',
-        desc: 'Day Hiking trip to Yerer Mountains',
-        urls: ['assets/langano/langano2.jpg','assets/langano/langano1.jpg','assets/langano/langano3.jpg','assets/langano/langano4.jpg','assets/langano/langano5.jpg'],
-        day: 'Sep 10, 2023',
-        location: '40km North East of Addis Ababa',
-        totalhike: '12Km',
-        elevation: '2514 m.a.s.l',
-        TechnicalDifficulty: '6/10',
-        GoodFor: 'all level of hikers',
-        cost: 1500,
-        costDetail: '1500 ETB, which includes transportation by bus, lunch, tea, coffee, entrance fee, and a guide.',
-        meetingLocation:'Megenagna at Kaldi\'s coffe',
-        meetingtime: '7:30 AM',
-        returnTime: '5:00 PM.',
-        position: [9.153631, 39.196590],
+        title: 'Danakil Depression',
+        desc: 'Camping trip to Danakil Depression',
+        mainDesc: campHike.find(item => item.title === 'Danakil Depression').desc,
+        urls: ['/assets/nxtDest/danakilD/danakil15.jpg','/assets/danakilD/danakil6.jpg','/assets/nxtDest/danakilD/danakil3.jpg','/assets/nxtDest/danakilD/danakil11.jpg','/assets/nxtDest/danakilD/danakil5.jpg','/assets/nxtDest/danakilD/danakil12.jpg','/assets/nxtDest/danakilD/danakil10.jpg','/assets/nxtDest/danakilD/danakil9.jpg','/assets/nxtDest/danakilD/danakil4.jpg','/assets/nxtDest/danakilD/danakil8.jpg','/assets/nxtDest/danakilD/danakil13.jpg','/assets/nxtDest/danakilD/danakil14.jpg'],
+        day: 'Feb 14-16, 2025',
+        location: '604km North East of Addis Ababa',
+        // totalhike: '12Km',
+        elevation: 'about 125 m (410 ft) below sea level',
+        // TechnicalDifficulty: '6/10',
+        // GoodFor: 'all level of hikers',
+        highlights: 'Guided tour, meals, transportation',
+        // cost: 1500,
+        costDetail: 'Round-trip flights, transportation by land cruisers, meals, water/tea/coffee, camping gear, entrance fees, and local guides.',
+        itinerary:['Fly to Semera, then drive to Lake Afdera and Erta Ale.', 'Sunrise at Erta Ale, followed by a drive to Dallol to explore volcanic sites.', 'Sunrise at Dallol, followed by a visit to Lake Assale (featuring salt formations, geothermal sites, and salt pools). Return to Mekele for a flight to Addis.'],
+        position: [14.2417, 40.3000],
+        activity2: campHike.find(item => item.title === 'Danakil Depression').activity2,
         btn: 'Details'
     },
 ]

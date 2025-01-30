@@ -499,7 +499,7 @@ margin-top: 10px;
   row-gap: 35px;
 }
 .places{
-  width: 70%;
+  width: 75%;
   border-radius: 10px;
   height: 340px;
 }
@@ -560,6 +560,7 @@ margin-top: 10px;
 .places .card-btn{
   padding: 1vw;
 }
+
 .nxt .nxt-article p{
   text-align: justify;
 }
@@ -572,12 +573,12 @@ padding: 5px;
 margin-top: 2vw;
 }
 .dest img{
-  width: 150px;
+  /* width: 150px; */
   height: 150px;
 }
 .detail .label,
 .detail .value{
-  font-size: 15px;
+  font-size: 14px;
 }
 }
 @media screen and (max-width: 400px ){
@@ -585,14 +586,23 @@ margin-top: 2vw;
   width: 100%;
   height:fit-content;
 }
-.dest{
+.dest img{
+  width: 170px ;
+}
+.dest-container{
+  padding: 2px;
+}
+.dest{ 
   gap: 1vw;
 }
+.detail .label,
+.detail .value{
+  font-size: 13px;
 }
-@media screen and (max-width: 290px ){
+}
+@media screen and (max-width: 340px ){
 .nxt-dest img{
-  width: 120px;
-  height: 120px;
+  width: 150px;
 }
 }
 

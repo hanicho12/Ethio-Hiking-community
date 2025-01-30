@@ -58,18 +58,31 @@ router.post('/submit-form', async (req, res) => {
     await newBooking.save();
 
     // Prepare Email Options
-    const userMailOptions = {
-      from: process.env.EMAIL_FROM,
-      to: email,
-      subject: 'Booking Confirmation',
-      html: `<p><strong>Dear ${name},</strong></p>
-            <p>We are pleased to inform you that your trip to ${title} has been successfully reserved. 
-            Please note that you have a pending payment of ${cost} birr.</p>
-            <p>Thank you for choosing our services. We look forward to assisting you further.</p>
-            <br />
-            <p>Best regards,</p>
-            <span>Ethio Hiking Community</span>`,
-    };
+  const userMailOptions = {
+  from: process.env.EMAIL_FROM,
+  to: email,
+  subject: 'Booking Confirmation - Ethio Hiking Community',
+  html: cost
+    ? `<p><strong>Dear ${name},</strong></p>
+      <p>We are pleased to inform you that your trip to <strong>${title}</strong> has been successfully reserved.</p>
+      <p>The total cost for this trip is <strong>${cost} birr</strong>. Please note that this amount is pending payment.</p>
+      <p>To complete your reservation, we will send you detailed payment instructions shortly.</p>
+      <p>If you have any questions or require further assistance, feel free to reach out to us.</p>
+      <br />
+      <p>Thank you for choosing Ethio Hiking Community. We look forward to making your trip an unforgettable experience.</p>
+      <p>Best regards,</p>
+      <span><strong>Ethio Hiking Community Team</strong></span>`
+    : `<p><strong>Dear ${name},</strong></p>
+      <p>We are pleased to inform you that your trip to <strong>${title}</strong> has been successfully reserved.</p>
+      <p>We will send you the total cost of the trip along with payment instructions shortly.</p>
+      <p>If you have any specific inquiries about the trip or payment options, please do not hesitate to contact us.</p>
+      <br />
+      <p>Thank you for choosing Ethio Hiking Community. We look forward to making your trip an unforgettable experience.</p>
+      <p>Best regards,</p>
+      <span><strong>Ethio Hiking Community</strong></span>`,
+};
+
+
 
     const adminMailOptions = {
       from: process.env.EMAIL_FROM,

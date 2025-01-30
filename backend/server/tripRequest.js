@@ -67,7 +67,7 @@ router.post('/submit-request', async (req, res) => {
             <p>Thank you for choosing our services.We look forward to assisting you further.<p>
             <br />
             <p>Best regards,</p>
-            <span>Ethio Hiking Community</span>`,
+            <span><strong>Ethio Hiking Community</strong></span>`,
     };
 
     const adminMailOptions = {
