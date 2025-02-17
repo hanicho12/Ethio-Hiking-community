@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import './about.css';
+import { about } from '../data/data';
 
 const About = () =>{
 
@@ -14,10 +15,10 @@ const About = () =>{
             <section className="about-hero">
                 <div>
                     <h1 className="main-heading">Ethio Hiking Community</h1>
-                    <img className='main' src='assets/main/main2.jpg' alt="Detail Image" />
+                    <img className='main' src={about[0]} alt="Detail Image" loading="lazy" />
                 </div>              
-                <p className="hero-text">Ethio Hiking Community was born out of a passion for adventure and a deep love for nature. We aim to connect people with the beauty of Ethiopia’s diverse landscapes through immersive hiking and travel experiences. With over five years of experience in organizing unforgettable adventures, we've become a trusted name in the world of travel. Our community boasts more than 30,000 followers on social media, connecting hikers and travelers from all corners of the globe.</p>
-                <p className="hero-text">At Ethio Hiking Community, we believe in the transformative power of travel. That's why we've curated a diverse range of experiences, spanning more than 20 breathtaking destinations across Ethiopia. From the towering peaks of the Semien Mountain to the lowest place on earth Danakil Depression, our trips are designed to inspire, challenge, and delight.</p>           
+                <p className="hero-text">Ethio Hiking Community was born out of a passion for adventure and a deep love for nature. We aim to connect people with the beauty of Ethiopia’s diverse landscapes through immersive hiking and travel experiences. With over five years of experience in organizing unforgettable adventures, we've become a trusted name in the world of travel. Our community boasts more than 200,000 followers on social media, connecting hikers and travelers from all corners of the globe.</p>
+                <p className="hero-text">At Ethio Hiking Community, we believe in the transformative power of travel. That's why we've curated a diverse range of experiences, spanning more than 30 breathtaking destinations across Ethiopia. From the towering peaks of the Semien Mountain to the lowest place on earth Danakil Depression, our trips are designed to inspire, challenge, and delight.</p>           
                 <p className="hero-text">Come join us as we explore the great outdoors, forge lifelong friendships, and create memories that will last a lifetime. Together, we'll conquer mountains, traverse valleys, and discover the beauty of our Ethiopia, one step at a time.</p>
             </section>
     </div>
@@ -155,13 +156,17 @@ const About = () =>{
                 <p className='hero-text center'>We believe in creating more than just unforgettable hiking experiences. We enjoy the simple pleasures of life, like sharing a cup of traditional Ethiopian coffee, preparing meals together, and bonding over stories around the campfire.</p>
                 <div className='activities-img'>
                     <div className='left'>
-                    <img className='' src='assets/main/main15.jpg' alt="Detail Image" />
-                    <img className='' src='assets/main/main12.jpg' alt="Detail Image" />
-                    <img className='' src='assets/main/main13.jpg' alt="Detail Image" />
-                    <img className='' src='assets/main/main14.jpg' alt="Detail Image" />
+                        {about.slice(1, 5).map((image, index) => (
+                            <img
+                            key={index}
+                            src={image}
+                            alt={`Detail Image ${index + 2}`}
+                            loading="lazy"
+                            />
+                        ))}
                 </div>
                 <div className='right'>
-                    <img className='type24' src={'assets/main/main10.jpg'} alt="Detail Image" />
+                    <img className='type24' src={about[5]} alt="Detail Image" loading="lazy"/>
                 </div>
                 </div>
             </section>

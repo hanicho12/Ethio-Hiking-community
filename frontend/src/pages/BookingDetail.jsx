@@ -7,8 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "leaflet/dist/leaflet.css";
 import "./bookingDetail.css";
-import { next } from "../components/data";
-import BookingForm from "./BookingForm";
+import { next } from "../data/data";
+import BookingForm from "../components/forms/BookingForm";
+import LazyBackground from "../components/ui/LazyBackground";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
@@ -104,7 +105,7 @@ function BookingDetail() {
         <Slider {...settings}>
           {dataItem.urls.map((url, index) => (
             <div key={index}>
-              <div className="detail-img" style={{ backgroundImage: `url(${url})` }} />
+              <LazyBackground className="detail-img"  src={url} />
             </div>
           ))}
         </Slider>

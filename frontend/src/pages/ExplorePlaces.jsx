@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { useParams} from 'react-router-dom';
-import { dayHike, campHike } from '../components/data';
+import { dayHike, campHike } from '../data/data';
 import './explorePlaces.css'
-import RequestForm from './RequestForm';
+import RequestForm from '../components/forms/RequestForm';
 
 function ExplorePlaces() {
   const targetRef = useRef(null)

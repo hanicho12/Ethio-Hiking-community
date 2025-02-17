@@ -10,7 +10,7 @@ const Error = () => {
     return (
       <div className="container">
         <div className="error-container">
-          <img src="/assets/main/Error.jpg" alt="404" />
+          <img src="/assets/main/Error.jpg" alt="404" loading="lazy" />
           <div className="error-response">
             <Link to="/">Back Home</Link>
           </div>

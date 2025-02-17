@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import { AiOutlineStar, AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai';
 import './reviewPage.css';
-import CustomModal from './CustomModal';
+import CustomModal from '../components/ui/CustomModal';
 
 function ReviewPage() {
   const [showReviewInputs, setShowReviewInputs] = useState(false);
@@ -13,6 +13,7 @@ function ReviewPage() {
   const [averageRating, setAverageRating] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [reviewsPerPage] = useState(5);
+  const [error, setError] = useState('');
   const [expandedReviews, setExpandedReviews] = useState([]);
   const topContainer = useRef();
   const reviewRef = useRef(null);
@@ -95,6 +96,7 @@ function ReviewPage() {
           console.error('Failed to add review');
         }
       } catch (error) {
+        setError('There was an error posting your review. Please try again later.');
         console.error('Error:', error);
       }
     });
@@ -303,6 +305,7 @@ function ReviewPage() {
                   </div>
                 </div>
               </div>
+              {error && <p className="error-text">{error}</p>}
               <div className="post">
                 <button type="submit">POST</button>
               </div>

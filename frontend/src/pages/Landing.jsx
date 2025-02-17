@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./landing.css";
-import { list, dayHike, next, campHike } from "../components/data";
+import { list, dayHike, next, campHike } from "../data/data";
 
 
 const Landing = () => {
@@ -154,7 +154,7 @@ const Landing = () => {
                   {dayHike.slice(0, dayHikeshowItems).map((item) => (
                     <div key={item.id} data-aos-once="true" data-aos="fade-up" className="places" ref={dayHikeshowItems === 9 || dayHikeshowItems === 8 ? dayHikeMoreRef : null} >
                       <h3>{item.title}</h3>
-                      <img src={item.url[0]} alt="" />
+                      <img src={item.url[0]} alt="" loading="lazy"/>
                       <p>{item.desc}</p>
                       <NavLink to={`/explorePlaces/${item.id}`} className='nav-link'>
                         <button className={`card-btn ${isPaused ? 'paused' : ''}`}
@@ -167,9 +167,9 @@ const Landing = () => {
                 </div>
                 <div className="more-less" >
                   {dayHikeshowItems === 9 || dayHikeshowItems === 8 ? (
-                    <button onClick={dayHikeShowMore} className="more">SHOW MORE</button>
+                    <button onClick={dayHikeShowMore} className="more">Show More</button>
                   ) : (
-                    <button onClick={dayHikeShowLess} className="less">SHOW LESS</button>
+                    <button onClick={dayHikeShowLess} className="less">Show Less</button>
                   )}
                 </div>
               </>
@@ -180,7 +180,7 @@ const Landing = () => {
                   {campHike.slice(0, campHikeshowItems).map((item) => (
                     <div key={item.id} data-aos-once="true" data-aos="fade-up" className="places" ref={campHikeshowItems === 9 || campHikeshowItems === 8 ? campHikeMoreRef : null} >
                       <h3>{item.title}</h3>
-                      <img src={item.url[0]} alt="" />
+                      <img src={item.url[0]} alt="" loading="lazy"/>
                       <p>{item.desc}</p>
                       <NavLink to={`/explorePlaces/${item.id}`} className='nav-link'>
                         <button className={`card-btn ${isPaused ? 'paused' : ''}`}
@@ -192,9 +192,9 @@ const Landing = () => {
                 </div>
                 <div className="more-less" >
                   {campHikeshowItems === 9 || campHikeshowItems === 8 ? (
-                    <button onClick={campHikeShowMore} className="more">SHOW MORE</button>
+                    <button onClick={campHikeShowMore} className="more">Show More</button>
                   ) : (
-                    <button onClick={campHikeShowLess} className="less">SHOW LESS</button>
+                    <button onClick={campHikeShowLess} className="less">Show Less</button>
                   )}
                 </div>
               </>
@@ -207,7 +207,7 @@ const Landing = () => {
           <div className="title-container">
             <h1 className="main-title">Your Next Destination</h1>
         </div>
-          <p>Experience the awe-inspiring beauty of nature with our premier hiking expeditions. Embark on unforgettable journeys through rugged terrains, lush forests, and majestic peaks. Our expert guides will lead you on exhilarating adventures, unveiling hidden treasures and breathtaking vistas along the way. Whether you're a seasoned trekker or a novice explorer, our meticulously curated trails offer something for everyone. Join us and immerse yourself in the wonders of the great outdoors. Your next unforgettable adventure awaits!</p>
+          <p>Experience the awe-inspiring beauty of Ethiopia’s diverse landscapes and cultures with our premier hiking and travel expeditions. Embark on unforgettable journeys through rugged terrains, lush forests, and majestic peaks. Our expert guides will lead you on exhilarating adventures, unveiling hidden treasures and breathtaking vistas along the way. Whether you're a seasoned trekker or a novice explorer, our meticulously curated trails offer something for everyone. Join us and immerse yourself in the wonders of the great outdoors, where every step brings you closer to nature and the rich heritage of Ethiopia. Your next unforgettable adventure starts here!</p>
         </div>
         <div className="nxt-dest">
           {next.map((item) => {
@@ -216,7 +216,7 @@ const Landing = () => {
               <div key={id} data-aos-once="true" data-aos="fade-up-right" className="dest-container">
                 <h3 className="title">{desc}</h3>
                 <div className="dest">
-                  <img src={urls[0]} alt="" />
+                  <img src={urls[0]} alt="" loading="lazy"/>
                   <div className="detail">
                     <p>
                       <span className="label"> Location:</span>
@@ -244,9 +244,9 @@ const Landing = () => {
         <div className="title-container">
           <h1 className="main-title ">Why Travel With Us</h1>         
         </div>
-        <p>When you choose to embark on a journey with us, you're not just booking a trip you're stepping into a world of unparalleled adventure and discovery. With years of expertise and a deep passion for exploration, our team is dedicated to curating experiences that transcend the ordinary and leave a lasting impression. At the heart of everything we do lies a commitment to excellence. From the moment you reach out to us, we're here to tailor every aspect of your journey to your unique desires and preferences.</p>
+        <p>At Ethio Hiking community, we specialize in hiking and adventure tours across Ethiopia, offering immersive experiences that blend nature, culture, and exploration. With years of expertise and a passion for discovery, our team is dedicated to crafting unforgettable journeys tailored to your unique interests. From the moment you connect with us, we ensure a seamless experience, handling every detail so you can focus on enjoying the adventure.</p>
           <br />
-          <p> Whether you dream of trekking through ancient forests, basking on sun-drenched beaches, or delving into vibrant cultural experiences, we'll work tirelessly to turn your vision into reality. But our dedication to your satisfaction doesn't stop there. We understand that every traveler is different, which is why we go above and beyond to ensure that your adventure is as seamless and stress-free as possible. From expertly crafted itineraries to luxurious accommodations and attentive service, we leave no stone unturned in our quest to provide you with the ultimate travel experience.</p>
+          <p> Our commitment to excellence means providing expert guidance, carefully curated itineraries, and personalized service that caters to every traveler. Whether you're seeking thrilling outdoor adventures or meaningful cultural encounters, we go above and beyond to create enriching experiences that leave lasting memories. With a focus on quality, safety, and authenticity, we invite you to embark on an adventure that will inspire and transform the way you explore Ethiopia.</p>
       </div>
     </>
   );
