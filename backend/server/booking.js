@@ -23,6 +23,7 @@ const bookingSchema = new Schema({
   phoneNumber: { type: String, required: true },
   numberOfHikers: { type: Number, required: true },
   preferences: { type: String, default: '' },
+  day: { type: String, required: true },
 });
 const Booking = mongoose.model('Booking', bookingSchema);
 
@@ -38,7 +39,7 @@ const transporter = nodemailer.createTransport({
 // API Routes
 router.post('/submit-form', async (req, res) => {
   try {
-    const { name, email, phoneNumber, numberOfHikers, preferences, title, cost } = req.body;
+    const { name, email, phoneNumber, numberOfHikers, preferences, title, cost, day } = req.body;
 
     // Input Validation
     if (!name || !email || !phoneNumber || !numberOfHikers) {
@@ -54,6 +55,7 @@ router.post('/submit-form', async (req, res) => {
       preferences,
       title,
       cost,
+      day
     });
     await newBooking.save();
 
@@ -64,7 +66,7 @@ router.post('/submit-form', async (req, res) => {
   subject: 'Booking Confirmation - Ethio Hiking Community',
   html: cost
     ? `<p><strong>Dear ${name},</strong></p>
-      <p>We are pleased to inform you that your trip to <strong>${title}</strong> has been successfully reserved.</p>
+      <p>We are pleased to inform you that your trip to <strong>${title}</strong> on <strong>${day}</strong> has been successfully reserved.</p>
       <p>The total cost for this trip is <strong>${cost} birr</strong>. Please note that this amount is pending payment.</p>
       <p>To complete your reservation, we will send you detailed payment instructions shortly.</p>
       <p>If you have any questions or require further assistance, feel free to reach out to us.</p>
@@ -73,7 +75,7 @@ router.post('/submit-form', async (req, res) => {
       <p>Best regards,</p>
       <span><strong>Ethio Hiking Community Team</strong></span>`
     : `<p><strong>Dear ${name},</strong></p>
-      <p>We are pleased to inform you that your trip to <strong>${title}</strong> has been successfully reserved.</p>
+      <p>We are pleased to inform you that your trip to <strong>${title}</strong> on <strong>${day}</strong> has been successfully reserved.</p>
       <p>We will send you the total cost of the trip along with payment instructions shortly.</p>
       <p>If you have any specific inquiries about the trip or payment options, please do not hesitate to contact us.</p>
       <br />
@@ -89,10 +91,11 @@ router.post('/submit-form', async (req, res) => {
       to: process.env.EMAIL_USER,
       subject: 'New Trip Reservation',
       html: `<p><strong>Dear Ethio Hiking Community,</strong></p>
-            <p>You have received a new trip reservation for ${title}. Please review the details and proceed accordingly:</p>
+            <p>You have received a new trip reservation for ${title}, date ${day}. Please review the details and proceed accordingly:</p>
             <ul>
               <li><strong>Name:</strong> ${name}</li>
               <li><strong>Email:</strong> ${email}</li>
+              <li><strong>date:</strong> ${day}</li>
               <li><strong>Phone Number:</strong> ${phoneNumber}</li>
               <li><strong>Number of Hikers:</strong> ${numberOfHikers}</li>
               <li><strong>Preferences or Special Requests:</strong> ${preferences}</li>

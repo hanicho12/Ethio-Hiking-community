@@ -125,8 +125,8 @@ function BookingDetail() {
           )}
           {dataItem.day && (
             <li>
-              <span className="label">Hiking Day:</span>
-              <span className="value">{dataItem.day}</span>
+              <span className="label">Date:</span>
+              <span className="value">{dataItem.day} ({dataItem.chooseDate.join(", ")})</span>
             </li>
           )}
           {dataItem.totalhike && (

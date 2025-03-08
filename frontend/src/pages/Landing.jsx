@@ -223,7 +223,7 @@ const Landing = () => {
                       <span className="value">{location}</span>
                     </p>
                     <p>
-                      <span className="label"> Day:</span>
+                      <span className="label"> Date:</span>
                       <span className="value">{day}</span>
                     </p>
                     <p>

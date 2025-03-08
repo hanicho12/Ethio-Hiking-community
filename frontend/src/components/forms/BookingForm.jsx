@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import validator from 'validator';
-import './bookingForm.css'
+import './bookingForm.css';
 
 function BookingForm({ selectedData }) {
-
+  const [selectedDate, setSelectedDate] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -40,14 +40,15 @@ function BookingForm({ selectedData }) {
       numberOfHikers,
       preferences,
       title: selectedData.title,
-      cost: selectedData.cost * numberOfHikers
+      cost: selectedData.cost * numberOfHikers,
+      day: selectedDate,
     };
 
     setError('');
     setLoading(true); 
 
     axios
-      .post('https://ethiohikingcommunity.com/api/booking/submit-form', formData)
+      .post('http://localhost:3000/api/booking/submit-form', formData)
       .then((response) => {
         console.log(response.data.message); 
         setSuccess(true);
@@ -76,6 +77,23 @@ function BookingForm({ selectedData }) {
         <div className="form-container">
           <h2 className="form-title">Book/Reserve a Trip to the {selectedData.title}</h2>
           <form onSubmit={handleSubmit} className='form'>
+            <div className="form-group date-option">
+              <label htmlFor="day">Trip Date:</label>
+              <select
+                id="day"
+                value={selectedDate}
+                onChange={(e) => setSelectedDate(e.target.value)}
+                required
+              >
+                <option value="">Select a date</option>
+                {selectedData.chooseDate.map((date, index) => (
+                  <option key={index} value={date}>
+                    {date}
+                  </option>
+                ))}
+              </select>
+            </div>
+
             <div className="form-group">
             <label htmlFor="name">
               Name:{" "}
